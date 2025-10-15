@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ssujit905.github.io/weight-loss-percentage-calculator/sitemap.xml
