@@ -349,6 +349,38 @@
       margin-bottom: 0.5rem;
     }
 
+    /* About Section Styles */
+    .about {
+      background: white;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about h2 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about h2 i {
+      color: var(--primary);
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--dark);
+    }
+
+    .about strong {
+      color: var(--primary);
+    }
+
     footer {
       background: var(--dark);
       color: white;
@@ -406,6 +438,14 @@
       .features-grid {
         grid-template-columns: 1fr;
       }
+      
+      .about {
+        padding: 1.5rem;
+      }
+      
+      .about h2 {
+        font-size: 1.5rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -425,6 +465,10 @@
       .footer-links {
         flex-direction: column;
         gap: 0.5rem;
+      }
+      
+      .about {
+        padding: 1rem;
       }
     }
   </style>
@@ -521,6 +565,18 @@
         Your Ad will appear here
       </div>
     </div>
+
+    <!-- About Section -->
+    <section class="about">
+      <h2><i class="fas fa-info-circle"></i> About This Weight Loss Calculator</h2>
+      <p>
+        This free online <strong>Weight Loss Percentage Calculator</strong> helps you find how much weight you've lost based on your starting and current weight. 
+        Whether you're on a diet, fitness journey, or tracking progress for health goals — this calculator gives instant results. 
+      </p>
+      <p style="margin-top: 1rem;">
+        Our tool is designed to be simple, accurate, and completely free to use. It works on any device and provides motivational feedback to keep you inspired on your fitness journey.
+      </p>
+    </section>
   </div>
 
   <footer>
