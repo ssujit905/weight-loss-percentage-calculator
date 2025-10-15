@@ -1,599 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free Weight Loss Percentage Calculator - Easily find out how much weight you've lost in percentage. Quick, simple & accurate weight loss calculator online.">
-  <meta name="keywords" content="weight loss calculator, percentage calculator weight loss, weight loss percentage, body fat calculator, online fitness calculator">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weight Loss Percentage Calculator | Free Online Tool</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="description" content="Easily calculate your weight loss percentage with our free online calculator. Track your weight loss progress accurately and instantly. Perfect for fitness and diet tracking.">
+  <meta name="keywords" content="weight loss calculator, percentage calculator, fitness calculator, body fat calculator, weight loss percentage, online calculator, health tracker">
+  <link rel="canonical" href="https://ssujit905.github.io/weight-loss-percentage-calculator/" />
+
+  <!-- ✅ Open Graph / Facebook -->
+  <meta property="og:title" content="Weight Loss Percentage Calculator | Free Online Tool" />
+  <meta property="og:description" content="Free online tool to calculate your weight loss percentage instantly and accurately." />
+  <meta property="og:url" content="https://ssujit905.github.io/weight-loss-percentage-calculator/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/icon.png" />
+
+  <!-- ✅ Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Weight Loss Percentage Calculator | Free Online Tool" />
+  <meta name="twitter:description" content="Calculate your weight loss percentage instantly and track your progress with our free calculator." />
+  <meta name="twitter:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/icon.png" />
+
+  <!-- ✅ Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Weight Loss Percentage Calculator",
+    "url": "https://ssujit905.github.io/weight-loss-percentage-calculator/",
+    "description": "Free online tool to calculate your weight loss percentage easily and accurately.",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "creator": {
+      "@type": "Person",
+      "name": "ssujit905"
+    }
+  }
+  </script>
+
+  <!-- (✅ Optional) Google Search Console verification tag will go here later -->
+  <!-- Example: <meta name="google-site-verification" content="YOUR_TAG_HERE" /> -->
+
   <style>
-    :root {
-      --primary: #4CAF50;
-      --primary-dark: #388E3C;
-      --secondary: #FF6B6B;
-      --accent: #6C63FF;
-      --light: #F8F9FA;
-      --dark: #343A40;
-      --gray: #6C757D;
-      --success: #28A745;
-      --warning: #FFC107;
-      --danger: #DC3545;
-      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      --radius: 12px;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
-      color: var(--dark);
-      line-height: 1.6;
-      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      background: #f9fafb;
+      color: #333;
       display: flex;
       flex-direction: column;
-    }
-
-    header {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-      transform: rotate(30deg);
-    }
-
-    .header-content {
-      position: relative;
-      z-index: 1;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      font-size: 2rem;
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
-    .tagline {
-      font-size: 1rem;
-      opacity: 0.9;
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      flex: 1;
-    }
-
-    .calculator-card {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
-
-    .card-header {
-      background: var(--light);
-      padding: 1.5rem;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .card-header h2 {
-      color: var(--dark);
-      font-size: 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .card-header h2 i {
-      color: var(--primary);
-    }
-
-    .card-body {
-      padding: 1.5rem;
-    }
-
-    .input-group {
-      margin-bottom: 1.5rem;
+    .calculator {
+      background: #fff;
+      padding: 20px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
     }
 
     label {
-      font-weight: 600;
       display: block;
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
-
-    .input-with-icon {
-      position: relative;
-    }
-
-    .input-with-icon i {
-      position: absolute;
-      left: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: var(--gray);
+      font-weight: 500;
+      margin-top: 15px;
+      text-align: left;
     }
 
     input {
       width: 100%;
-      padding: 12px 15px 12px 45px;
-      border: 2px solid #E9ECEF;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
       border-radius: 8px;
       font-size: 1rem;
-      transition: all 0.3s;
-    }
-
-    input:focus {
-      border-color: var(--primary);
-      outline: none;
-      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
-    }
-
-    .unit-selector {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .unit-option {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      border: 2px solid #E9ECEF;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-weight: 500;
-    }
-
-    .unit-option.active {
-      border-color: var(--primary);
-      background-color: rgba(76, 175, 80, 0.1);
-      color: var(--primary);
     }
 
     button {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-      color: white;
-      border: none;
-      padding: 15px 20px;
       width: 100%;
+      margin-top: 20px;
+      background: #2ecc71;
+      border: none;
+      color: #fff;
+      padding: 12px;
+      font-size: 1rem;
       border-radius: 8px;
-      font-size: 1.1rem;
-      font-weight: 600;
       cursor: pointer;
-      transition: all 0.3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+      transition: 0.3s;
     }
 
     button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 8px rgba(76, 175, 80, 0.4);
+      background: #27ae60;
     }
 
-    button:active {
-      transform: translateY(0);
-    }
-
-    .result-container {
-      margin-top: 2rem;
-      text-align: center;
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      background: var(--light);
-      display: none;
-    }
-
-    .result-container.show {
-      display: block;
-      animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .result-value {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin: 0.5rem 0;
-    }
-
-    .result-text {
+    .result {
+      margin-top: 20px;
+      font-weight: 600;
+      color: #27ae60;
       font-size: 1.2rem;
-      margin-bottom: 1rem;
     }
 
-    .progress-container {
-      margin: 1.5rem 0;
-    }
-
-    .progress-bar {
-      height: 12px;
-      background: #E9ECEF;
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 0.5rem;
-    }
-
-    .progress-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
-      border-radius: 6px;
-      transition: width 1s ease-in-out;
-    }
-
-    .progress-labels {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.9rem;
-      color: var(--gray);
-    }
-
-    .motivation-message {
-      font-style: italic;
-      margin-top: 1rem;
-      padding: 1rem;
-      background: white;
-      border-radius: var(--radius);
-      border-left: 4px solid var(--primary);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .feature-card {
-      background: white;
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    .about {
+      margin-top: 50px;
+      max-width: 600px;
       text-align: center;
-      transition: transform 0.3s;
     }
 
-    .feature-card:hover {
-      transform: translateY(-5px);
+    .about h2 {
+      font-size: 1.5rem;
+      color: #2c3e50;
+      margin-bottom: 10px;
     }
 
-    .feature-icon {
-      font-size: 2.5rem;
-      color: var(--primary);
-      margin-bottom: 1rem;
-    }
-
-    .feature-card h3 {
-      margin-bottom: 0.5rem;
-      color: var(--dark);
-    }
-
-    .ad-section {
-      margin: 2rem 0;
-      text-align: center;
-      background: white;
-      padding: 1.5rem;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .ad-label {
-      font-size: 0.9rem;
-      color: var(--gray);
-      margin-bottom: 0.5rem;
+    .about p {
+      color: #555;
+      line-height: 1.6;
     }
 
     footer {
-      background: var(--dark);
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      margin-top: auto;
-    }
-
-    .footer-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin: 1rem 0;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: var(--primary);
-    }
-
-    .copyright {
-      margin-top: 1rem;
+      margin-top: 40px;
       font-size: 0.9rem;
-      opacity: 0.8;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-      
-      .container {
-        margin: 1rem auto;
-      }
-      
-      .card-body {
-        padding: 1rem;
-      }
-      
-      .result-value {
-        font-size: 2rem;
-      }
-      
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
+      color: #777;
     }
 
     @media (max-width: 480px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
-      
-      .tagline {
-        font-size: 0.9rem;
-      }
-      
-      .unit-selector {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      
-      .footer-links {
-        flex-direction: column;
-        gap: 0.5rem;
+      .calculator {
+        padding: 15px;
       }
     }
   </style>
 </head>
 <body>
+  <h1>Weight Loss Percentage Calculator</h1>
+  <div class="calculator">
+    <label for="startingWeight">Starting Weight (kg):</label>
+    <input type="number" id="startingWeight" placeholder="Enter your starting weight">
 
-  <header>
-    <div class="header-content">
-      <h1><i class="fas fa-weight"></i> Weight Loss Percentage Calculator</h1>
-      <p class="tagline">Track your fitness journey with our easy-to-use calculator. See exactly how much weight you've lost in percentage terms!</p>
-    </div>
-  </header>
+    <label for="currentWeight">Current Weight (kg):</label>
+    <input type="number" id="currentWeight" placeholder="Enter your current weight">
 
-  <div class="container">
-    <div class="calculator-card">
-      <div class="card-header">
-        <h2><i class="fas fa-calculator"></i> Calculate Your Progress</h2>
-      </div>
-      <div class="card-body">
-        <div class="unit-selector">
-          <div class="unit-option active" data-unit="kg">Kilograms (kg)</div>
-          <div class="unit-option" data-unit="lbs">Pounds (lbs)</div>
-        </div>
+    <button onclick="calculateWeightLoss()">Calculate</button>
 
-        <div class="input-group">
-          <label for="startWeight">Starting Weight</label>
-          <div class="input-with-icon">
-            <i class="fas fa-weight-hanging"></i>
-            <input type="number" id="startWeight" placeholder="e.g. 80" step="0.1" min="0">
-          </div>
-        </div>
-
-        <div class="input-group">
-          <label for="currentWeight">Current Weight</label>
-          <div class="input-with-icon">
-            <i class="fas fa-weight"></i>
-            <input type="number" id="currentWeight" placeholder="e.g. 70" step="0.1" min="0">
-          </div>
-        </div>
-
-        <button onclick="calculateWeightLoss()">
-          <i class="fas fa-calculator"></i> Calculate Weight Loss
-        </button>
-
-        <div class="result-container" id="resultContainer">
-          <div class="result-value" id="resultValue">0%</div>
-          <div class="result-text" id="resultText"></div>
-          
-          <div class="progress-container">
-            <div class="progress-bar">
-              <div class="progress-fill" id="progressFill" style="width: 0%"></div>
-            </div>
-            <div class="progress-labels">
-              <span>0%</span>
-              <span>Goal: 10%</span>
-            </div>
-          </div>
-          
-          <div class="motivation-message" id="motivationMessage"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-bolt"></i>
-        </div>
-        <h3>Quick Results</h3>
-        <p>Get instant calculations with our optimized tool</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-mobile-alt"></i>
-        </div>
-        <h3>Mobile Friendly</h3>
-        <p>Works perfectly on all devices and screen sizes</p>
-      </div>
-      
-      <div class="feature-card">
-        <div class="feature-icon">
-          <i class="fas fa-shield-alt"></i>
-        </div>
-        <h3>Privacy First</h3>
-        <p>Your data never leaves your device</p>
-      </div>
-    </div>
-
-    <div class="ad-section">
-      <div class="ad-label">Advertisement</div>
-      <!-- Google AdSense placeholder -->
-      <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; color: #6c757d;">
-        Your Ad will appear here
-      </div>
-    </div>
+    <div class="result" id="result"></div>
   </div>
 
+  <section class="about">
+    <h2>About This Weight Loss Calculator</h2>
+    <p>
+      This free online <strong>Weight Loss Percentage Calculator</strong> helps you find how much weight you’ve lost based on your starting and current weight. 
+      Whether you're on a diet, fitness journey, or tracking your progress for health goals — this calculator gives you instant, accurate results.
+    </p>
+  </section>
+
   <footer>
-    <div class="footer-content">
-      <p>Weight Loss Percentage Calculator - Track Your Fitness Journey</p>
-      <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Contact Us</a>
-        <a href="#">About</a>
-      </div>
-      <p class="copyright">&copy; 2025 WeightLossCalc | Free Weight Loss Percentage Calculator Online</p>
-    </div>
+    &copy; 2025 Weight Loss Percentage Calculator by ssujit905 | All Rights Reserved.
   </footer>
 
   <script>
-    // Unit selection
-    const unitOptions = document.querySelectorAll('.unit-option');
-    let selectedUnit = 'kg';
-    
-    unitOptions.forEach(option => {
-      option.addEventListener('click', () => {
-        unitOptions.forEach(opt => opt.classList.remove('active'));
-        option.classList.add('active');
-        selectedUnit = option.getAttribute('data-unit');
-        
-        // Update placeholders
-        document.getElementById('startWeight').placeholder = `e.g. 80${selectedUnit === 'kg' ? '' : ''}`;
-        document.getElementById('currentWeight').placeholder = `e.g. 70${selectedUnit === 'kg' ? '' : ''}`;
-      });
-    });
-
     function calculateWeightLoss() {
-      const start = parseFloat(document.getElementById('startWeight').value);
-      const current = parseFloat(document.getElementById('currentWeight').value);
-      const resultContainer = document.getElementById('resultContainer');
-      const resultValue = document.getElementById('resultValue');
-      const resultText = document.getElementById('resultText');
-      const progressFill = document.getElementById('progressFill');
-      const motivationMessage = document.getElementById('motivationMessage');
+      const start = parseFloat(document.getElementById("startingWeight").value);
+      const current = parseFloat(document.getElementById("currentWeight").value);
+      const resultDiv = document.getElementById("result");
 
-      // Validation
       if (isNaN(start) || isNaN(current) || start <= 0 || current < 0) {
-        showError("⚠️ Please enter valid weights.");
+        resultDiv.innerHTML = "Please enter valid weights.";
+        resultDiv.style.color = "red";
         return;
       }
 
       if (current > start) {
-        showError("You have gained weight, not lost 😅 Keep working on your fitness goals!");
+        resultDiv.innerHTML = "Your weight increased! Keep working toward your goal.";
+        resultDiv.style.color = "#e67e22";
         return;
       }
 
-      // Calculate results
       const loss = start - current;
       const percentage = (loss / start) * 100;
 
-      // Update UI
-      resultValue.textContent = `${percentage.toFixed(1)}%`;
-      resultText.textContent = `You lost ${loss.toFixed(1)} ${selectedUnit} (${percentage.toFixed(1)}%) of your body weight!`;
-      
-      // Animate progress bar
-      progressFill.style.width = `${Math.min(percentage, 100)}%`;
-      
-      // Set motivation message
-      if (percentage >= 10) {
-        motivationMessage.textContent = "🎉 Amazing progress! You're doing fantastic!";
-        motivationMessage.style.borderLeftColor = "var(--success)";
-      } else if (percentage >= 5) {
-        motivationMessage.textContent = "👍 Great job! You're making steady progress toward your goals.";
-        motivationMessage.style.borderLeftColor = "var(--primary)";
-      } else if (percentage > 0) {
-        motivationMessage.textContent = "💪 Every step counts! Keep up the good work and stay consistent.";
-        motivationMessage.style.borderLeftColor = "var(--warning)";
-      } else {
-        motivationMessage.textContent = "🌟 Starting your journey is the first step to success! You've got this!";
-        motivationMessage.style.borderLeftColor = "var(--accent)";
-      }
-      
-      // Show results
-      resultContainer.classList.add('show');
-      
-      // Scroll to results
-      resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      resultDiv.style.color = "#27ae60";
+      resultDiv.innerHTML = `You lost <strong>${loss.toFixed(1)} kg</strong>, which is <strong>${percentage.toFixed(2)}%</strong> of your starting weight.`;
     }
-
-    function showError(message) {
-      const resultContainer = document.getElementById('resultContainer');
-      const resultValue = document.getElementById('resultValue');
-      const resultText = document.getElementById('resultText');
-      const motivationMessage = document.getElementById('motivationMessage');
-      
-      resultValue.textContent = "Error";
-      resultText.textContent = message;
-      motivationMessage.textContent = "Please check your inputs and try again.";
-      motivationMessage.style.borderLeftColor = "var(--danger)";
-      
-      resultContainer.classList.add('show');
-      resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    // Allow Enter key to trigger calculation
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Enter') {
-        calculateWeightLoss();
-      }
-    });
   </script>
-
 </body>
 </html>
