@@ -2,67 +2,70 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="google-site-verification" content="e7Ns7ikrdDuV0k9dWODPjsMseFTBlxT5q4xTw2b3eDw" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weight Loss Percentage Calculator | Free Online Tool</title>
+  <title>Weight Loss % Calculator - Calculate Pounds Lost | Free Tool</title>
   
   <!-- ✅ SEO Meta Tags -->
-  <meta name="description" content="Easily calculate your weight loss percentage with our free online calculator. Track your weight loss progress accurately and instantly. Perfect for fitness and diet tracking.">
-  <meta name="keywords" content="weight loss calculator, percentage calculator, fitness calculator, body fat calculator, weight loss percentage, online calculator, health tracker">
+  <meta name="description" content="Instantly calculate exactly how many pounds you've lost and your weight loss percentage. Free, easy-to-use calculator with instant results. No signup required.">
+  <meta name="keywords" content="weight loss percentage calculator, how many pounds have i lost, pounds lost calculator, weight loss calculator, percentage loss calculator weight, fitness calculator">
   <link rel="canonical" href="https://ssujit905.github.io/weight-loss-percentage-calculator/" />
 
+  <!-- ✅ Performance & SEO Meta -->
+  <meta name="robots" content="index, follow">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
+
   <!-- ✅ Open Graph / Facebook -->
-  <meta property="og:title" content="Weight Loss Percentage Calculator | Free Online Tool" />
-  <meta property="og:description" content="Free online tool to calculate your weight loss percentage instantly and accurately." />
+  <meta property="og:title" content="Weight Loss % Calculator - Calculate Pounds Lost | Free Tool" />
+  <meta property="og:description" content="Instantly calculate exactly how many pounds you've lost and your weight loss percentage. Free calculator with instant results." />
   <meta property="og:url" content="https://ssujit905.github.io/weight-loss-percentage-calculator/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/icon.png" />
+  <meta property="og:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/calculator-preview.png" />
 
   <!-- ✅ Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Weight Loss Percentage Calculator | Free Online Tool" />
-  <meta name="twitter:description" content="Calculate your weight loss percentage instantly and track your progress with our free calculator." />
-  <meta name="twitter:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/icon.png" />
+  <meta name="twitter:title" content="Weight Loss % Calculator - Calculate Pounds Lost | Free Tool" />
+  <meta name="twitter:description" content="Instantly calculate exactly how many pounds you've lost and your weight loss percentage." />
+  <meta name="twitter:image" content="https://ssujit905.github.io/weight-loss-percentage-calculator/calculator-preview.png" />
 
   <!-- ✅ Enhanced Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Weight Loss Percentage Calculator",
+    "name": "Weight Loss Percentage Calculator - Calculate Pounds Lost",
     "url": "https://ssujit905.github.io/weight-loss-percentage-calculator/",
-    "description": "Free online tool to calculate your weight loss percentage easily and accurately.",
+    "description": "Free online tool to calculate weight loss percentage and total pounds lost instantly",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "All",
     "creator": {
       "@type": "Person",
-      "name": "ssujit905"
+      "name": "WeightLossCalc Team"
     },
     "mainEntity": {
       "@type": "FAQPage",
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "How is weight loss percentage calculated?",
+          "name": "How do I calculate my weight loss percentage?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Weight loss percentage is calculated using the formula: ((Starting Weight - Current Weight) / Starting Weight) × 100. This gives you the percentage of body weight you've lost."
+            "text": "Use our free weight loss percentage calculator or the formula: (Starting Weight - Current Weight) ÷ Starting Weight × 100. Get instant results showing exactly how many pounds you've lost and your percentage."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "How many pounds have I lost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our calculator shows exactly how many pounds you've lost instantly. Just enter your starting and current weight to see your total pounds lost and weight loss percentage. For example: Starting 200 lbs, Current 180 lbs = 20 pounds lost (10%)."
           }
         },
         {
           "@type": "Question",
-          "name": "Why track weight loss percentage instead of pounds?",
+          "name": "Is this weight loss percentage calculator free?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Percentage gives a better perspective of your progress relative to your starting point. Losing 10 pounds means different things for someone starting at 150 lbs vs 250 lbs."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this calculator free to use?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, our weight loss percentage calculator is completely free with no registration required. Your data stays private and is not stored on our servers."
+            "text": "Yes, our weight loss calculator is completely free with no registration required. Calculate pounds lost and weight loss percentage instantly with no hidden costs."
           }
         }
       ]
@@ -314,6 +317,16 @@
       margin-bottom: 1rem;
     }
 
+    .pounds-result {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
     .progress-container {
       margin: 1.5rem 0;
     }
@@ -347,6 +360,47 @@
       background: white;
       border-radius: var(--radius);
       border-left: 4px solid var(--primary);
+    }
+
+    .example-section {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin: 2rem 0;
+    }
+
+    .example-section h3 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .example-card {
+      background: var(--light);
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .example-card .pounds {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .example-card .percentage {
+      font-size: 1.2rem;
+      color: var(--dark);
     }
 
     .features-grid {
@@ -395,38 +449,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* About Section Styles */
-    .about {
-      background: white;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .about h2 {
-      color: var(--primary);
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .about h2 i {
-      color: var(--primary);
-    }
-
-    .about p {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: var(--dark);
-    }
-
-    .about strong {
-      color: var(--primary);
-    }
-
     /* FAQ Section */
     .faq-section {
       background: white;
@@ -469,47 +491,6 @@
     .faq-answer {
       color: var(--gray);
       line-height: 1.6;
-    }
-
-    /* Related Tools Section */
-    .related-tools {
-      background: white;
-      padding: 2rem;
-      margin: 2rem 0;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-    }
-
-    .related-tools h2 {
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .tools-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-    }
-
-    .tool-link {
-      display: block;
-      padding: 1rem;
-      background: var(--light);
-      border-radius: 8px;
-      text-decoration: none;
-      color: var(--dark);
-      transition: all 0.3s;
-      text-align: center;
-    }
-
-    .tool-link:hover {
-      background: var(--primary);
-      color: white;
-      transform: translateY(-2px);
     }
 
     footer {
@@ -570,15 +551,7 @@
         grid-template-columns: 1fr;
       }
       
-      .about, .faq-section, .related-tools {
-        padding: 1.5rem;
-      }
-      
-      .about h2, .faq-section h2, .related-tools h2 {
-        font-size: 1.5rem;
-      }
-      
-      .tools-grid {
+      .example-grid {
         grid-template-columns: 1fr;
       }
     }
@@ -601,21 +574,8 @@
         flex-direction: column;
         gap: 0.5rem;
       }
-      
-      .about, .faq-section, .related-tools {
-        padding: 1rem;
-      }
     }
   </style>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NGE8233VFP');
-</script>
 </head>
 <body>
 
@@ -625,15 +585,32 @@
   <header>
     <div class="header-content">
       <h1><i class="fas fa-weight" aria-hidden="true"></i> Weight Loss Percentage Calculator</h1>
-      <p class="tagline">Track your fitness journey with our easy-to-use calculator. See exactly how much weight you've lost in percentage terms!</p>
+      <p class="tagline">Calculate exactly how many pounds you've lost and your weight loss percentage instantly</p>
     </div>
   </header>
 
   <main id="main-content">
     <div class="container">
+      <!-- Example Section -->
+      <section class="example-section">
+        <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> Quick Example</h3>
+        <p>See how it works: If you started at <strong>200 lbs</strong> and now weigh <strong>180 lbs</strong></p>
+        <div class="example-grid">
+          <div class="example-card">
+            <div class="pounds">20 lbs</div>
+            <div class="percentage">Pounds Lost</div>
+          </div>
+          <div class="example-card">
+            <div class="pounds">10%</div>
+            <div class="percentage">Weight Loss</div>
+          </div>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Try it yourself below with your own numbers!</p>
+      </section>
+
       <div class="calculator-card">
         <div class="card-header">
-          <h2><i class="fas fa-calculator" aria-hidden="true"></i> Calculate Your Progress</h2>
+          <h2><i class="fas fa-calculator" aria-hidden="true"></i> Calculate Your Weight Loss</h2>
         </div>
         <div class="card-body">
           <div class="unit-selector">
@@ -645,7 +622,7 @@
             <label for="startWeight">Starting Weight</label>
             <div class="input-with-icon">
               <i class="fas fa-weight-hanging" aria-hidden="true"></i>
-              <input type="number" id="startWeight" placeholder="e.g. 80" step="0.1" min="0" aria-label="Enter your starting weight">
+              <input type="number" id="startWeight" placeholder="e.g. 200" step="0.1" min="0" aria-label="Enter your starting weight">
             </div>
           </div>
 
@@ -653,16 +630,17 @@
             <label for="currentWeight">Current Weight</label>
             <div class="input-with-icon">
               <i class="fas fa-weight" aria-hidden="true"></i>
-              <input type="number" id="currentWeight" placeholder="e.g. 70" step="0.1" min="0" aria-label="Enter your current weight">
+              <input type="number" id="currentWeight" placeholder="e.g. 180" step="0.1" min="0" aria-label="Enter your current weight">
             </div>
           </div>
 
-          <button onclick="calculateWeightLoss()" aria-label="Calculate weight loss percentage">
-            <i class="fas fa-calculator" aria-hidden="true"></i> Calculate Weight Loss
+          <button onclick="calculateWeightLoss()" aria-label="Calculate weight loss percentage and pounds lost">
+            <i class="fas fa-calculator" aria-hidden="true"></i> Calculate My Weight Loss
           </button>
 
           <div class="result-container" id="resultContainer" aria-live="polite">
             <div class="result-value" id="resultValue">0%</div>
+            <div class="pounds-result" id="poundsResult"></div>
             <div class="result-text" id="resultText"></div>
             
             <div class="progress-container">
@@ -685,26 +663,58 @@
           <div class="feature-icon">
             <i class="fas fa-bolt" aria-hidden="true"></i>
           </div>
-          <h3>Quick Results</h3>
-          <p>Get instant calculations with our optimized tool</p>
+          <h3>Instant Results</h3>
+          <p>See exactly how many pounds you've lost and your percentage in seconds</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">
-            <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+            <i class="fas fa-balance-scale" aria-hidden="true"></i>
           </div>
-          <h3>Mobile Friendly</h3>
-          <p>Works perfectly on all devices and screen sizes</p>
+          <h3>Any Unit</h3>
+          <p>Works with pounds (lbs) or kilograms (kg) - your choice</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">
             <i class="fas fa-shield-alt" aria-hidden="true"></i>
           </div>
-          <h3>Privacy First</h3>
-          <p>Your data never leaves your device</p>
+          <h3>100% Private</h3>
+          <p>Your data never leaves your device - no registration required</p>
         </div>
       </div>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2><i class="fas fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> How do I calculate my weight loss percentage?
+          </div>
+          <div class="faq-answer">
+            Use our calculator above or the formula: <strong>(Starting Weight - Current Weight) ÷ Starting Weight × 100</strong>. For example: Starting 200 lbs, Current 180 lbs = 20 pounds lost (10%).
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> How many pounds have I lost?
+          </div>
+          <div class="faq-answer">
+            Enter your starting and current weight above to see exactly how many pounds you've lost. The calculator shows both total pounds lost and weight loss percentage instantly.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> Is this weight loss percentage calculator free?
+          </div>
+          <div class="faq-answer">
+            Yes! Our weight loss calculator is completely free with no registration required. Calculate pounds lost and weight loss percentage instantly with no hidden costs.
+          </div>
+        </div>
+      </section>
 
       <div class="ad-section">
         <div class="ad-label">Advertisement</div>
@@ -713,72 +723,18 @@
           Your Ad will appear here
         </div>
       </div>
-
-      <!-- About Section -->
-      <section class="about">
-        <h2><i class="fas fa-info-circle" aria-hidden="true"></i> About This Weight Loss Calculator</h2>
-        <p>
-          This free online <strong>Weight Loss Percentage Calculator</strong> helps you find how much weight you've lost based on your starting and current weight. 
-          Whether you're on a diet, fitness journey, or tracking progress for health goals — this calculator gives instant results. 
-        </p>
-        <p style="margin-top: 1rem;">
-          Our tool is designed to be simple, accurate, and completely free to use. It works on any device and provides motivational feedback to keep you inspired on your fitness journey.
-        </p>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="faq-section">
-        <h2><i class="fas fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</h2>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <i class="fas fa-question" aria-hidden="true"></i> How is weight loss percentage calculated?
-          </div>
-          <div class="faq-answer">
-            Weight loss percentage is calculated using the formula: <strong>((Starting Weight - Current Weight) / Starting Weight) × 100</strong>. This gives you the percentage of body weight you've lost relative to your starting weight.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <i class="fas fa-question" aria-hidden="true"></i> Why track weight loss percentage instead of pounds?
-          </div>
-          <div class="faq-answer">
-            Percentage gives a better perspective of your progress relative to your starting point. Losing 10 pounds means different things for someone starting at 150 lbs vs 250 lbs. Percentage provides a standardized way to measure progress.
-          </div>
-        </div>
-        
-        <div class="faq-item">
-          <div class="faq-question">
-            <i class="fas fa-question" aria-hidden="true"></i> Is this calculator free to use?
-          </div>
-          <div class="faq-answer">
-            Yes, our weight loss percentage calculator is completely free with no registration required. Your data stays private and is not stored on our servers. All calculations happen directly in your browser.
-          </div>
-        </div>
-      </section>
-
-      <!-- Related Tools Section -->
-      <section class="related-tools">
-        <h2><i class="fas fa-link" aria-hidden="true"></i> Related Health Calculators</h2>
-        <div class="tools-grid">
-          <a href="#" class="tool-link">BMI Calculator</a>
-          <a href="#" class="tool-link">Calorie Calculator</a>
-          <a href="#" class="tool-link">Body Fat Calculator</a>
-          <a href="#" class="tool-link">Macro Calculator</a>
-        </div>
-      </section>
     </div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <p>Weight Loss Percentage Calculator - Track Your Fitness Journey</p>
+      <p>Weight Loss Percentage Calculator - Track Exactly How Many Pounds You've Lost</p>
       <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="blog.html">Blogs</a>
-        <a href="contact.html">Contact Us</a>
-        <a href="about.html">About</a>
+        <a href="index.html">Calculator</a>
+        <a href="blog.html">Blog</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Contact Us</a>
       </div>
       <p class="copyright">&copy; 2025 WeightLossCalc | Free Weight Loss Percentage Calculator Online</p>
     </div>
@@ -787,7 +743,7 @@
   <script>
     // Unit selection
     const unitOptions = document.querySelectorAll('.unit-option');
-    let selectedUnit = 'kg';
+    let selectedUnit = 'lbs'; // Default to pounds since that's what users are searching for
     
     unitOptions.forEach(option => {
       option.addEventListener('click', () => {
@@ -795,9 +751,14 @@
         option.classList.add('active');
         selectedUnit = option.getAttribute('data-unit');
         
-        // Update placeholders
-        document.getElementById('startWeight').placeholder = `e.g. 80${selectedUnit === 'kg' ? '' : ''}`;
-        document.getElementById('currentWeight').placeholder = `e.g. 70${selectedUnit === 'kg' ? '' : ''}`;
+        // Update placeholders to show pounds by default
+        if (selectedUnit === 'lbs') {
+          document.getElementById('startWeight').placeholder = 'e.g. 200';
+          document.getElementById('currentWeight').placeholder = 'e.g. 180';
+        } else {
+          document.getElementById('startWeight').placeholder = 'e.g. 90';
+          document.getElementById('currentWeight').placeholder = 'e.g. 81';
+        }
       });
       
       // Add keyboard accessibility
@@ -814,18 +775,19 @@
       const current = parseFloat(document.getElementById('currentWeight').value);
       const resultContainer = document.getElementById('resultContainer');
       const resultValue = document.getElementById('resultValue');
+      const poundsResult = document.getElementById('poundsResult');
       const resultText = document.getElementById('resultText');
       const progressFill = document.getElementById('progressFill');
       const motivationMessage = document.getElementById('motivationMessage');
 
       // Validation
       if (isNaN(start) || isNaN(current) || start <= 0 || current < 0) {
-        showError("⚠️ Please enter valid weights.");
+        showError("⚠️ Please enter valid weights to calculate how many pounds you've lost.");
         return;
       }
 
       if (current > start) {
-        showError("You have gained weight, not lost 😅 Keep working on your fitness goals!");
+        showError("Your current weight is higher than your starting weight. Have you gained weight?");
         return;
       }
 
@@ -833,22 +795,30 @@
       const loss = start - current;
       const percentage = (loss / start) * 100;
 
-      // Update UI
+      // Update UI with pounds/kgs emphasis
       resultValue.textContent = `${percentage.toFixed(1)}%`;
-      resultText.textContent = `You lost ${loss.toFixed(1)} ${selectedUnit} (${percentage.toFixed(1)}%) of your body weight!`;
+      
+      // Show pounds lost prominently
+      if (selectedUnit === 'lbs') {
+        poundsResult.textContent = `🎉 You lost ${loss.toFixed(1)} pounds!`;
+        resultText.textContent = `Starting: ${start} lbs → Current: ${current} lbs = ${loss.toFixed(1)} lbs lost (${percentage.toFixed(1)}%)`;
+      } else {
+        poundsResult.textContent = `🎉 You lost ${loss.toFixed(1)} kilograms!`;
+        resultText.textContent = `Starting: ${start} kg → Current: ${current} kg = ${loss.toFixed(1)} kg lost (${percentage.toFixed(1)}%)`;
+      }
       
       // Animate progress bar
       progressFill.style.width = `${Math.min(percentage, 100)}%`;
       
-      // Set motivation message
+      // Set motivation message based on percentage
       if (percentage >= 10) {
-        motivationMessage.textContent = "🎉 Amazing progress! You're doing fantastic!";
+        motivationMessage.textContent = "🎉 Amazing progress! You're doing fantastic! Losing 10% of your body weight is a major health milestone.";
         motivationMessage.style.borderLeftColor = "var(--success)";
       } else if (percentage >= 5) {
-        motivationMessage.textContent = "👍 Great job! You're making steady progress toward your goals.";
+        motivationMessage.textContent = "👍 Great job! You're making steady progress toward your goals. Keep up the great work!";
         motivationMessage.style.borderLeftColor = "var(--primary)";
       } else if (percentage > 0) {
-        motivationMessage.textContent = "💪 Every step counts! Keep up the good work and stay consistent.";
+        motivationMessage.textContent = "💪 Every step counts! You're on the right track. Consistency is key to long-term success.";
         motivationMessage.style.borderLeftColor = "var(--warning)";
       } else {
         motivationMessage.textContent = "🌟 Starting your journey is the first step to success! You've got this!";
@@ -865,10 +835,12 @@
     function showError(message) {
       const resultContainer = document.getElementById('resultContainer');
       const resultValue = document.getElementById('resultValue');
+      const poundsResult = document.getElementById('poundsResult');
       const resultText = document.getElementById('resultText');
       const motivationMessage = document.getElementById('motivationMessage');
       
       resultValue.textContent = "Error";
+      poundsResult.textContent = "";
       resultText.textContent = message;
       motivationMessage.textContent = "Please check your inputs and try again.";
       motivationMessage.style.borderLeftColor = "var(--danger)";
@@ -881,6 +853,14 @@
     document.addEventListener('keydown', function(event) {
       if (event.key === 'Enter') {
         calculateWeightLoss();
+      }
+    });
+
+    // Set default to pounds since that's what users are searching for
+    document.addEventListener('DOMContentLoaded', function() {
+      const poundsOption = document.querySelector('.unit-option[data-unit="lbs"]');
+      if (poundsOption) {
+        poundsOption.click();
       }
     });
   </script>
