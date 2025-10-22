@@ -1,32 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0">
-<channel>
-  <title>Weight Loss Percentage Calculator Blog</title>
-  <link>https://ssujit905.github.io/weight-loss-percentage-calculator/</link>
-  <description>Learn how to calculate, track, and improve your weight loss progress with expert tips and our free online calculator.</description>
-  <language>en</language>
-  <lastBuildDate>Sat, 18 Oct 2025 03:30:00 GMT</lastBuildDate>
-
-  <item>
-    <title>How to Calculate Weight Loss Percentage Easily</title>
-    <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post1</link>
-    <description>A simple guide to accurately calculate your weight loss percentage and stay motivated on your fitness journey.</description>
-    <pubDate>Sat, 18 Oct 2025 03:00:00 GMT</pubDate>
-  </item>
-
-  <item>
-    <title>Difference Between Pounds and Kilograms for Weight Loss Tracking</title>
-    <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post2</link>
-    <description>Understand the key differences between pounds and kilograms when tracking your weight loss progress.</description>
-    <pubDate>Sat, 18 Oct 2025 03:00:00 GMT</pubDate>
-  </item>
-
-  <item>
-    <title>Top 5 Tips for Tracking Weight Loss Progress</title>
-    <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post3</link>
-    <description>Discover 5 simple ways to effectively monitor and maintain your weight loss progress over time.</description>
-    <pubDate>Sat, 18 Oct 2025 03:00:00 GMT</pubDate>
-  </item>
-
-</channel>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weight Loss Percentage Calculator Blog</title>
+    <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html</link>
+    <description>Expert tips and guides on calculating weight loss percentage and tracking fitness progress</description>
+    <language>en-us</language>
+    <atom:link href="https://ssujit905.github.io/weight-loss-percentage-calculator/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Jan 2025 12:00:00 GMT</lastBuildDate>
+    <pubDate>Mon, 20 Jan 2025 12:00:00 GMT</pubDate>
+    <generator>WeightLossCalc RSS Generator</generator>
+    
+    <item>
+      <title>How to Calculate Weight Loss Percentage Easily</title>
+      <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post1</link>
+      <description>Learn the simple method to calculate your weight loss percentage and exactly how many pounds you've lost with step-by-step examples and formulas.</description>
+      <pubDate>Wed, 15 Jan 2025 09:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post1</guid>
+      <category>Weight Loss</category>
+      <category>Calculator</category>
+    </item>
+    
+    <item>
+      <title>Difference Between Pounds and Kilograms for Weight Loss Tracking</title>
+      <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post2</link>
+      <description>Discover which measurement system works best for tracking exactly how many pounds you've lost and why it matters for motivation and accurate progress tracking.</description>
+      <pubDate>Fri, 10 Jan 2025 10:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post2</guid>
+      <category>Weight Loss</category>
+      <category>Measurement</category>
+    </item>
+    
+    <item>
+      <title>Top 5 Tips for Tracking Weight Loss Progress</title>
+      <link>https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post3</link>
+      <description>Effective strategies to monitor exactly how many pounds you've lost, maintain motivation, and use multiple tracking methods for comprehensive progress insight.</description>
+      <pubDate>Sun, 05 Jan 2025 11:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://ssujit905.github.io/weight-loss-percentage-calculator/blog.html#post3</guid>
+      <category>Weight Loss</category>
+      <category>Tips</category>
+    </item>
+  </channel>
 </rss>
