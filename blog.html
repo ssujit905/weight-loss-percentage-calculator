@@ -298,10 +298,10 @@
       margin: 0 auto;
     }
 
-    /* Blog Grid with Expandable Cards */
+    /* Blog Grid with Expandable Cards - FIXED */
     .blog-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
       gap: 2rem;
       margin-bottom: 3rem;
     }
@@ -311,18 +311,21 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: all 0.4s ease;
       position: relative;
-    }
-
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      grid-column: span 1;
     }
 
     .blog-card.expanded {
+      grid-column: 1 / -1;
+      z-index: 10;
       transform: none;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-card:hover:not(.expanded) {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
     }
 
     .blog-image {
@@ -390,7 +393,7 @@
     }
 
     .blog-card.expanded .blog-full-content {
-      max-height: 2000px;
+      max-height: 5000px;
       margin-bottom: 1.5rem;
     }
 
@@ -584,6 +587,10 @@
 
       .blog-card {
         margin-bottom: 1rem;
+      }
+
+      .blog-card.expanded {
+        grid-column: 1;
       }
 
       .breadcrumbs {
@@ -1130,6 +1137,17 @@
       const button = card.querySelector('.read-more-btn');
       const icon = button.querySelector('i');
       
+      // Close any other expanded cards
+      const expandedCards = document.querySelectorAll('.blog-card.expanded');
+      expandedCards.forEach(expandedCard => {
+        if (expandedCard.id !== postId) {
+          const expandedButton = expandedCard.querySelector('.read-more-btn');
+          expandedCard.classList.remove('expanded');
+          expandedButton.innerHTML = '<i class="fas fa-book-open"></i> Read More';
+        }
+      });
+      
+      // Toggle current card
       card.classList.toggle('expanded');
       
       if (card.classList.contains('expanded')) {
