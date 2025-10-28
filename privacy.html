@@ -1,15 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Weight Loss Percentage Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Weight Loss Percentage Calculator</title>
+  <meta name="description" content="Privacy policy for WeightLossCalc. Learn how we protect your data and privacy when using our weight loss calculator.">
+  
+  <!-- Google Analytics & Search Console -->
+  <meta name="google-site-verification" content="e7Ns7ikrdDuV0k9dWODPjsMseFTBlxT5q4xTw2b3eDw" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NGE8233VFP');
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Reuse the same CSS from the main page */
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --secondary: #FF6B6B;
+      --accent: #6C63FF;
+      --light: #F8F9FA;
+      --dark: #343A40;
+      --gray: #6C757D;
+      --success: #28A745;
+      --warning: #FFC107;
+      --danger: #DC3545;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex: 1;
+    }
+
+    /* Back to Calculator Link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s;
+    }
+
+    .back-link:hover {
+      gap: 0.7rem;
+      color: var(--primary-dark);
+    }
+
+    /* Info Pages Styling */
+    .info-page {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .info-page h1 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .info-page h2 {
+      color: var(--dark);
+      margin: 1.5rem 0 1rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--light);
+    }
+
+    .info-page p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .info-page ul, .info-page ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .info-page li {
+      margin-bottom: 0.5rem;
+    }
+
+    .privacy-highlight {
+      background: rgba(76, 175, 80, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin: 1.5rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .calculator-promo {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      text-align: center;
+      margin: 2rem 0;
+    }
+
+    .calculator-promo h3 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .calculator-promo a {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 1rem;
+      transition: all 0.3s;
+    }
+
+    .calculator-promo a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .container {
+        margin: 1rem auto;
+      }
+      
+      .info-page {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .tagline {
+        font-size: 0.9rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p>We respect your privacy. This calculator runs entirely in your browser — no data is collected, saved, or shared. We do not use cookies or analytics that store personal information.</p>
-  <p>For any concerns, you can reach us via the Contact page.</p>
-  <a href="index.html">← Back to Home</a>
+
+  <!-- Accessibility: Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy Policy</h1>
+      <p class="tagline">How we protect your data and privacy when using our weight loss calculator</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="container">
+      <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Weight Loss Calculator
+      </a>
+
+      <div class="info-page">
+        <h1>Privacy Policy</h1>
+        <p><strong>Last Updated:</strong> January 1, 2025</p>
+        
+        <div class="privacy-highlight">
+          <p><strong>Important:</strong> Our <a href="index.html">Weight Loss Percentage Calculator</a> is designed with your privacy in mind. All calculations happen directly in your browser - we never see or store your personal weight data.</p>
+        </div>
+        
+        <h2>Information We Collect</h2>
+        <p>We are committed to protecting your privacy. Here's what you need to know about the information we collect:</p>
+        
+        <h3>Personal Information</h3>
+        <p><strong>We do not collect any personal weight information.</strong> When you use our weight loss calculator:</p>
+        <ul>
+          <li>Your weight data (starting weight, current weight) is processed entirely in your browser</li>
+          <li>We never transmit, store, or have access to your personal weight information</li>
+          <li>No registration or personal details are required to use our calculator</li>
+        </ul>
+        
+        <h3>Automatically Collected Information</h3>
+        <p>Like most websites, we collect some anonymous information through cookies and analytics:</p>
+        <ul>
+          <li><strong>Google Analytics:</strong> We use Google Analytics to understand how visitors use our site (pages visited, time spent, etc.)</li>
+          <li><strong>Cookies:</strong> We use cookies to improve your browsing experience and analyze site traffic</li>
+          <li><strong>IP Address:</strong> Your IP address is collected anonymously for security and analytics purposes</li>
+        </ul>
+        
+        <h2>How We Use Information</h2>
+        <p>We use the anonymous information we collect to:</p>
+        <ul>
+          <li>Improve our website and calculator functionality</li>
+          <li>Understand how visitors use our tools</li>
+          <li>Monitor and prevent any security issues</li>
+          <li>Provide aggregated statistics about website usage</li>
+        </ul>
+        
+        <h2>Third-Party Services</h2>
+        <p>We use the following third-party services:</p>
+        <ul>
+          <li><strong>Google Analytics:</strong> For understanding website traffic and user behavior</li>
+          <li><strong>Google AdSense:</strong> To display relevant advertisements (if applicable)</li>
+        </ul>
+        <p>These services have their own privacy policies, and we encourage you to review them.</p>
+        
+        <h2>Data Security</h2>
+        <p>We take reasonable measures to protect our website and your information. However, no internet transmission is 100% secure. The good news is that since we don't collect your personal weight data, there's no sensitive information to protect.</p>
+        
+        <h2>Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+          <li>Use our <a href="index.html">weight loss calculator</a> without providing any personal information</li>
+          <li>Disable cookies in your browser settings (though this may affect site functionality)</li>
+          <li>Contact us with any privacy concerns (see our <a href="contact.html">contact page</a>)</li>
+        </ul>
+        
+        <h2>Children's Privacy</h2>
+        <p>Our website is not directed at children under 13. We do not knowingly collect personal information from children under 13.</p>
+        
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date.</p>
+        
+        <h2>Contact Us</h2>
+        <p>If you have any questions about this privacy policy, please contact us through our <a href="contact.html">contact form</a>.</p>
+        
+        <div class="calculator-promo">
+          <h3>Ready to Calculate Your Weight Loss?</h3>
+          <p>Try our privacy-focused calculator that keeps your data secure on your device.</p>
+          <a href="index.html">Use Our Calculator Now</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>WeightLossCalc - Free Weight Loss Percentage Calculator</p>
+      <div class="footer-links">
+        <a href="index.html">Weight Loss Calculator</a>
+        <a href="blog.html">Weight Loss Blog</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2025 WeightLossCalc | Free How Much Weight Have I Lost Calculator</p>
+    </div>
+  </footer>
+
 </body>
 </html>
