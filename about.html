@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us - Weight Loss Percentage Calculator</title>
-  <meta name="description" content="Learn about our free weight loss percentage calculator tool. Our mission to help you track your weight loss journey effectively.">
+  <title>About Us - Weight Loss Percentage Calculator | WeightLossPercent.com</title>
+  <meta name="description" content="Learn about WeightLossPercent.com - our mission to provide free, accurate weight loss tracking tools. Calculate exactly how many pounds you've lost with our percentage calculator.">
   
-  <!-- Google Analytics & Search Console -->
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="keywords" content="about weight loss calculator, weight loss percentage calculator, how many pounds have i lost, weight tracking tools, free fitness calculator">
+  <link rel="canonical" href="https://weightlosspercent.com/about" />
+
+  <!-- ✅ Favicon Configuration -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://weightlosspercent.com/weightlosslogo.png">
+
+  <!-- ✅ Google Analytics & Search Console -->
   <meta name="google-site-verification" content="e7Ns7ikrdDuV0k9dWODPjsMseFTBlxT5q4xTw2b3eDw" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
   <script>
@@ -16,9 +27,33 @@
     gtag('config', 'G-NGE8233VFP');
   </script>
 
+  <!-- ✅ Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About WeightLossPercent.com",
+    "description": "Learn about our free weight loss percentage calculator and our mission to help people track exactly how many pounds they've lost",
+    "url": "https://weightlosspercent.com/about",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WeightLossPercent",
+      "url": "https://weightlosspercent.com",
+      "logo": "https://weightlosspercent.com/weightlosslogo.png",
+      "description": "Free online weight loss percentage calculator to track exactly how many pounds you've lost"
+    },
+    "mainEntity": {
+      "@type": "WebApplication",
+      "name": "Weight Loss Percentage Calculator",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "description": "Free tool to calculate weight loss percentage and track exactly how many pounds you've lost"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reuse the same CSS from the main page */
     :root {
       --primary: #4CAF50;
       --primary-dark: #388E3C;
@@ -66,14 +101,24 @@
       top: 6px;
     }
 
+    /* Header Styles */
     header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 1rem;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     header::before {
@@ -87,124 +132,236 @@
       transform: rotate(30deg);
     }
 
-    .header-content {
-      position: relative;
-      z-index: 1;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: white;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .logo h1 {
+      font-size: 1.5rem;
+      margin: 0;
     }
 
-    .tagline {
-      font-size: 1rem;
-      opacity: 0.9;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Breadcrumb Styles */
+    .breadcrumbs {
+      background: white;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 0;
+    }
+
+    .breadcrumbs ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .breadcrumbs li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .breadcrumbs a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumbs span {
+      color: var(--gray);
+    }
+
+    /* Main Layout */
+    .main-container {
+      display: flex;
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+      flex: 1;
+    }
+
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Content Cards */
+    .content-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: var(--light);
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card-header h2 {
+      color: var(--dark);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    /* About Page Specific Styles */
+    .about-hero {
+      text-align: center;
+      padding: 2rem;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .about-hero h1 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+    }
+
+    .about-hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
       max-width: 600px;
       margin: 0 auto;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      flex: 1;
-    }
-
-    /* Back to Calculator Link */
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s;
-    }
-
-    .back-link:hover {
-      gap: 0.7rem;
-      color: var(--primary-dark);
-    }
-
-    /* Info Pages Styling */
-    .info-page {
+    .mission-section {
       background: white;
       padding: 2rem;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .info-page h1 {
+    .mission-section h2 {
       color: var(--primary);
       margin-bottom: 1.5rem;
       text-align: center;
+      font-size: 1.8rem;
     }
 
-    .info-page h2 {
-      color: var(--dark);
-      margin: 1.5rem 0 1rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--light);
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
     }
 
-    .info-page p {
+    .mission-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+
+    .mission-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
       margin-bottom: 1rem;
-      line-height: 1.7;
     }
 
-    .info-page ul, .info-page ol {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .info-page li {
+    .mission-card h3 {
       margin-bottom: 0.5rem;
+      color: var(--dark);
     }
 
-    .team-grid {
+    .values-section {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .values-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .values-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1.5rem;
-      margin: 2rem 0;
     }
 
-    .team-member {
-      text-align: center;
-      padding: 1.5rem;
-      background: var(--light);
-      border-radius: var(--radius);
+    .value-item {
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+      padding: 1rem;
     }
 
-    .team-member img {
-      width: 100px;
-      height: 100px;
+    .value-icon {
+      background: var(--primary);
+      color: white;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      border: 3px solid var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
 
-    .team-member h3 {
+    .value-content h3 {
       color: var(--dark);
       margin-bottom: 0.5rem;
     }
 
-    .team-member .role {
-      color: var(--primary);
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
+    /* Calculator Promo */
     .calculator-promo {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
       padding: 2rem;
       border-radius: var(--radius);
       text-align: center;
-      margin: 2rem 0;
     }
 
     .calculator-promo h3 {
@@ -212,7 +369,7 @@
       font-size: 1.5rem;
     }
 
-    .calculator-promo a {
+    .cta-button {
       display: inline-block;
       background: white;
       color: var(--primary);
@@ -224,11 +381,67 @@
       transition: all 0.3s;
     }
 
-    .calculator-promo a:hover {
+    .cta-button:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
+    /* Sidebar Cards */
+    .sidebar-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .sidebar-card-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+    }
+
+    .sidebar-card-header h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sidebar-card-body {
+      padding: 1.5rem;
+    }
+
+    /* Ad Sections */
+    .ad-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .ad-label {
+      background: var(--light);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .ad-content {
+      padding: 2rem;
+      text-align: center;
+      color: var(--gray);
+      background: #f8f9fa;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Footer */
     footer {
       background: var(--dark);
       color: white;
@@ -238,7 +451,7 @@
     }
 
     .footer-content {
-      max-width: 800px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -266,36 +479,71 @@
       opacity: 0.8;
     }
 
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .main-container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        order: -1;
+      }
+    }
+
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
       }
-      
-      .container {
-        margin: 1rem auto;
+
+      .nav-links {
+        gap: 1rem;
       }
-      
-      .info-page {
-        padding: 1.5rem;
+
+      .about-hero h1 {
+        font-size: 2rem;
       }
-      
-      .team-grid {
+
+      .mission-grid {
         grid-template-columns: 1fr;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .breadcrumbs {
+        padding: 1rem;
+      }
+
+      .breadcrumbs ol {
+        flex-wrap: wrap;
       }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
       }
-      
-      .tagline {
-        font-size: 0.9rem;
+
+      .about-hero h1 {
+        font-size: 1.8rem;
       }
-      
+
+      .about-hero p {
+        font-size: 1rem;
+      }
+
       .footer-links {
         flex-direction: column;
         gap: 0.5rem;
+      }
+
+      .card-body {
+        padding: 1rem;
       }
     }
   </style>
@@ -305,72 +553,299 @@
   <!-- Accessibility: Skip to main content -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="https://weightlosspercent.com/"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <span>›</span>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="https://weightlosspercent.com/about"><span itemprop="name">About Us</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </nav>
+
   <header>
     <div class="header-content">
-      <h1><i class="fas fa-info-circle" aria-hidden="true"></i> About Our Weight Loss Calculator</h1>
-      <p class="tagline">Learn about our mission to help you track your weight loss journey effectively</p>
+      <a href="https://weightlosspercent.com/" class="logo">
+        <i class="fas fa-weight" aria-hidden="true"></i>
+        <h1>WeightLossPercent</h1>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="https://weightlosspercent.com/">Calculator</a></li>
+          <li><a href="https://weightlosspercent.com/blog">Blog</a></li>
+          <li><a href="https://weightlosspercent.com/about" class="active">About</a></li>
+          <li><a href="https://weightlosspercent.com/contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <div class="container">
-      <a href="index.html" class="back-link">
-        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Weight Loss Calculator
-      </a>
+    <div class="main-container">
+      <!-- Left Content Area -->
+      <div class="content-area">
+        
+        <!-- About Hero -->
+        <section class="about-hero">
+          <h1><i class="fas fa-info-circle" aria-hidden="true"></i> About WeightLossPercent.com</h1>
+          <p>Your trusted partner in tracking weight loss progress and calculating exactly how many pounds you've lost</p>
+        </section>
 
-      <div class="info-page">
-        <h1>About WeightLossCalc</h1>
-        
-        <p>Welcome to WeightLossCalc, your trusted partner in tracking weight loss progress. We believe that understanding your progress is the key to staying motivated on your health journey.</p>
-        
-        <h2>Our Mission</h2>
-        <p>Our mission is simple: to provide accurate, easy-to-use tools that help people track their weight loss progress effectively. We understand that weight loss is a personal journey, and having the right tools can make all the difference.</p>
-        
-        <h2>Why We Created This Tool</h2>
-        <p>Traditional weight tracking often focuses only on pounds or kilograms lost, but this doesn't tell the whole story. A 10-pound loss means something very different for someone who started at 150 pounds versus someone who started at 250 pounds.</p>
-        
-        <p>That's why we created our <a href="index.html">Weight Loss Percentage Calculator</a> - to give you a more meaningful way to measure your progress that accounts for your starting point.</p>
-        
-        <h2>Our Values</h2>
-        <ul>
-          <li><strong>Accuracy:</strong> We provide precise calculations based on established formulas</li>
-          <li><strong>Privacy:</strong> Your data never leaves your device - we don't store any personal information</li>
-          <li><strong>Accessibility:</strong> Our tools are free to use with no registration required</li>
-          <li><strong>Education:</strong> We provide resources to help you understand your progress better</li>
-        </ul>
-        
-        <h2>How Our Calculator Works</h2>
-        <p>Our weight loss percentage calculator uses a simple but powerful formula:</p>
-        <p style="text-align: center; font-weight: 600; background: var(--light); padding: 1rem; border-radius: var(--radius);">
-          (Starting Weight - Current Weight) ÷ Starting Weight × 100
-        </p>
-        <p>This gives you a percentage that represents your true progress, making it easier to set realistic goals and celebrate meaningful milestones.</p>
-        
-        <div class="calculator-promo">
+        <!-- Mission Section -->
+        <section class="mission-section">
+          <h2><i class="fas fa-bullseye" aria-hidden="true"></i> Our Mission</h2>
+          <p>At WeightLossPercent.com, our mission is to provide accurate, easy-to-use tools that help people track their weight loss progress effectively. We understand that weight loss is a personal journey, and having the right tools can make all the difference in staying motivated and achieving your goals.</p>
+          
+          <div class="mission-grid">
+            <div class="mission-card">
+              <div class="mission-icon">
+                <i class="fas fa-calculator" aria-hidden="true"></i>
+              </div>
+              <h3>Accurate Calculations</h3>
+              <p>We provide precise weight loss percentage calculations based on established health formulas used by professionals.</p>
+            </div>
+            
+            <div class="mission-card">
+              <div class="mission-icon">
+                <i class="fas fa-shield-alt" aria-hidden="true"></i>
+              </div>
+              <h3>Complete Privacy</h3>
+              <p>Your data never leaves your device. We don't store any personal information or track your progress.</p>
+            </div>
+            
+            <div class="mission-card">
+              <div class="mission-icon">
+                <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+              <h3>Educational Resources</h3>
+              <p>We provide comprehensive guides to help you understand and interpret your weight loss progress.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Why We Created This Tool -->
+        <section class="content-card">
+          <div class="card-header">
+            <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Why We Created This Tool</h2>
+          </div>
+          <div class="card-body">
+            <p>Traditional weight tracking often focuses only on pounds or kilograms lost, but this doesn't tell the whole story. A 10-pound loss means something very different for someone who started at 150 pounds versus someone who started at 250 pounds.</p>
+            
+            <p>That's why we created our <a href="https://weightlosspercent.com/">Weight Loss Percentage Calculator</a> - to give you a more meaningful way to measure your progress that accounts for your starting point and provides context for your achievements.</p>
+            
+            <div style="background: rgba(76, 175, 80, 0.05); padding: 1.5rem; border-radius: var(--radius); margin: 1.5rem 0;">
+              <h3 style="color: var(--primary); margin-bottom: 1rem;">The Power of Weight Loss Percentage</h3>
+              <p>Weight loss percentage is the standard measurement used by healthcare professionals because it:</p>
+              <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                <li>Provides meaningful context for your progress</li>
+                <li>Allows fair comparison between different people</li>
+                <li>Highlights important health milestones (5-10% loss significantly improves health markers)</li>
+                <li>Helps maintain motivation during plateaus</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Values -->
+        <section class="values-section">
+          <h2><i class="fas fa-heart" aria-hidden="true"></i> Our Values</h2>
+          <div class="values-grid">
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-check" aria-hidden="true"></i>
+              </div>
+              <div class="value-content">
+                <h3>Accuracy</h3>
+                <p>We provide precise calculations based on established health formulas used by medical professionals worldwide.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-lock" aria-hidden="true"></i>
+              </div>
+              <div class="value-content">
+                <h3>Privacy First</h3>
+                <p>Your weight data never leaves your browser. We believe your health information should remain private.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-universal-access" aria-hidden="true"></i>
+              </div>
+              <div class="value-content">
+                <h3>Accessibility</h3>
+                <p>Our tools are completely free to use with no registration required. Available to everyone, everywhere.</p>
+              </div>
+            </div>
+            
+            <div class="value-item">
+              <div class="value-icon">
+                <i class="fas fa-book" aria-hidden="true"></i>
+              </div>
+              <div class="value-content">
+                <h3>Education</h3>
+                <p>We provide comprehensive resources to help you understand and interpret your weight loss progress.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Calculator Promo -->
+        <section class="calculator-promo">
           <h3>Ready to Calculate Your Progress?</h3>
           <p>Use our free calculator to find out exactly how much weight you've lost in pounds or kilograms and your weight loss percentage.</p>
-          <a href="index.html">Try Our Calculator Now</a>
+          <a href="https://weightlosspercent.com/" class="cta-button">
+            <i class="fas fa-calculator" aria-hidden="true"></i> Try Our Calculator Now
+          </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-card">
+          <div class="card-header">
+            <h2><i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch</h2>
+          </div>
+          <div class="card-body">
+            <p>Have questions, suggestions, or feedback? We'd love to hear from you! Our team is dedicated to improving our tools and providing the best possible experience for our users.</p>
+            <p>Visit our <a href="https://weightlosspercent.com/contact">contact page</a> to get in touch with us.</p>
+            <p style="margin-top: 1.5rem; font-style: italic;">Thank you for choosing WeightLossPercent.com to support your health journey!</p>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="sidebar">
+        
+        <!-- Top Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
         </div>
-        
-        <h2>Contact Us</h2>
-        <p>Have questions, suggestions, or feedback? We'd love to hear from you! Visit our <a href="contact.html">contact page</a> to get in touch with our team.</p>
-        
-        <p>Thank you for choosing WeightLossCalc to support your health journey!</p>
+
+        <!-- Quick Calculator Card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-calculator" aria-hidden="true"></i> Quick Calculator</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <p style="margin-bottom: 1rem; font-size: 0.9rem;">Try our free weight loss percentage calculator to see exactly how many pounds you've lost.</p>
+            <a href="https://weightlosspercent.com/" class="cta-button" style="display: block; text-align: center;">
+              <i class="fas fa-calculator"></i> Calculate Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-fire" aria-hidden="true"></i> Popular Articles</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post1" style="color: inherit; text-decoration: none;">How to Calculate Weight Loss Percentage</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Step-by-step guide to accurate weight tracking</p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post3" style="color: inherit; text-decoration: none;">5 Tracking Methods That Work</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Effective strategies to monitor your progress</p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post2" style="color: inherit; text-decoration: none;">Pounds vs Kilograms Guide</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Which measurement system works best for you</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x600)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
+        <!-- Trust Indicators -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-award" aria-hidden="true"></i> Why Trust Us</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Medical Accuracy</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">Based on established health formulas</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Complete Privacy</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">Your data never leaves your device</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Free Forever</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">No registration or hidden costs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <p>WeightLossCalc - Free Weight Loss Percentage Calculator</p>
+      <p>WeightLossPercent.com - Calculate Exactly How Many Pounds You've Lost</p>
       <div class="footer-links">
-        <a href="index.html">Weight Loss Calculator</a>
-        <a href="blog.html">Weight Loss Blog</a>
-        <a href="about.html">About Us</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="https://weightlosspercent.com/">Calculator</a>
+        <a href="https://weightlosspercent.com/blog">Blog</a>
+        <a href="https://weightlosspercent.com/about">About Us</a>
+        <a href="https://weightlosspercent.com/privacy">Privacy Policy</a>
+        <a href="https://weightlosspercent.com/contact">Contact Us</a>
       </div>
-      <p class="copyright">&copy; 2025 WeightLossCalc | Free How Much Weight Have I Lost Calculator</p>
+      <p class="copyright">&copy; 2025 WeightLossPercent.com | Free Weight Loss Percentage Calculator Online</p>
     </div>
   </footer>
 
