@@ -3,10 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - Weight Loss Percentage Calculator</title>
-  <meta name="description" content="Contact the WeightLossCalc team with questions, feedback, or suggestions about our weight loss calculator.">
+  <title>Contact Us - Weight Loss Percentage Calculator | WeightLossPercent.com</title>
+  <meta name="description" content="Contact the WeightLossPercent.com team with questions, feedback, or suggestions about our weight loss percentage calculator.">
   
-  <!-- Google Analytics & Search Console -->
+  <!-- ✅ SEO Meta Tags -->
+  <meta name="keywords" content="contact weight loss calculator, weight loss percentage calculator help, fitness tool feedback, weight tracking questions">
+  <link rel="canonical" href="https://weightlosspercent.com/contact" />
+
+  <!-- ✅ Favicon Configuration -->
+  <link rel="icon" type="image/png" sizes="32x32" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="https://weightlosspercent.com/weightlosslogo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="https://weightlosspercent.com/weightlosslogo.png">
+
+  <!-- ✅ Google Analytics & Search Console -->
   <meta name="google-site-verification" content="e7Ns7ikrdDuV0k9dWODPjsMseFTBlxT5q4xTw2b3eDw" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
   <script>
@@ -16,9 +27,25 @@
     gtag('config', 'G-NGE8233VFP');
   </script>
 
+  <!-- ✅ Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact WeightLossPercent.com",
+    "description": "Contact us for questions, feedback, or suggestions about our weight loss percentage calculator",
+    "url": "https://weightlosspercent.com/contact",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WeightLossPercent",
+      "url": "https://weightlosspercent.com",
+      "logo": "https://weightlosspercent.com/weightlosslogo.png"
+    }
+  }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* Reuse the same CSS from the main page */
     :root {
       --primary: #4CAF50;
       --primary-dark: #388E3C;
@@ -66,14 +93,24 @@
       top: 6px;
     }
 
+    /* Header Styles */
     header {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
+      padding: 1rem;
       box-shadow: var(--shadow);
       position: relative;
       overflow: hidden;
+    }
+
+    .header-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
     }
 
     header::before {
@@ -87,76 +124,182 @@
       transform: rotate(30deg);
     }
 
-    .header-content {
-      position: relative;
-      z-index: 1;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: white;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    .logo h1 {
+      font-size: 1.5rem;
+      margin: 0;
     }
 
-    .tagline {
-      font-size: 1rem;
-      opacity: 0.9;
-      max-width: 600px;
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.3s;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      background: rgba(255,255,255,0.2);
+    }
+
+    /* Breadcrumb Styles */
+    .breadcrumbs {
+      background: white;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      margin-bottom: 0;
+    }
+
+    .breadcrumbs ol {
+      list-style: none;
+      display: flex;
+      gap: 0.5rem;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
-    .container {
-      max-width: 800px;
+    .breadcrumbs li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .breadcrumbs a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumbs span {
+      color: var(--gray);
+    }
+
+    /* Main Layout */
+    .main-container {
+      display: flex;
+      max-width: 1400px;
       margin: 2rem auto;
       padding: 0 1rem;
+      gap: 2rem;
       flex: 1;
     }
 
-    /* Back to Calculator Link */
-    .back-link {
-      display: inline-flex;
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Content Cards */
+    .content-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: var(--light);
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card-header h2 {
+      color: var(--dark);
+      font-size: 1.5rem;
+      display: flex;
       align-items: center;
       gap: 0.5rem;
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-      transition: all 0.3s;
     }
 
-    .back-link:hover {
-      gap: 0.7rem;
-      color: var(--primary-dark);
+    .card-body {
+      padding: 1.5rem;
     }
 
-    /* Info Pages Styling */
-    .info-page {
-      background: white;
+    /* Contact Page Specific Styles */
+    .contact-hero {
+      text-align: center;
       padding: 2rem;
+      background: white;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .info-page h1 {
+    .contact-hero h1 {
       color: var(--primary);
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .info-page h2 {
-      color: var(--dark);
-      margin: 1.5rem 0 1rem 0;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--light);
-    }
-
-    .info-page p {
       margin-bottom: 1rem;
-      line-height: 1.7;
+      font-size: 2.5rem;
     }
 
+    .contact-hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    .contact-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    /* Form Styles */
     .contact-form {
-      margin-top: 1.5rem;
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
     }
 
     .form-group {
@@ -167,9 +310,10 @@
       display: block;
       margin-bottom: 0.5rem;
       font-weight: 600;
+      color: var(--dark);
     }
 
-    input, textarea {
+    input, textarea, select {
       width: 100%;
       padding: 12px 15px;
       border: 2px solid #E9ECEF;
@@ -179,7 +323,7 @@
       font-family: inherit;
     }
 
-    input:focus, textarea:focus {
+    input:focus, textarea:focus, select:focus {
       border-color: var(--primary);
       outline: none;
       box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
@@ -211,48 +355,72 @@
     .success-message {
       background: rgba(40, 167, 69, 0.1);
       border-left: 4px solid var(--success);
-      padding: 1rem;
-      margin: 1rem 0;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
       border-radius: 0 var(--radius) var(--radius) 0;
       display: none;
     }
 
     .success-message.show {
       display: block;
+      animation: fadeIn 0.5s ease;
     }
 
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .contact-card {
-      background: var(--light);
-      padding: 1.5rem;
+    /* FAQ Section */
+    .faq-section {
+      background: white;
+      padding: 2rem;
       border-radius: var(--radius);
-      text-align: center;
+      box-shadow: var(--shadow);
     }
 
-    .contact-card i {
-      font-size: 2rem;
+    .faq-section h2 {
       color: var(--primary);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
-    .contact-card h3 {
-      margin-bottom: 0.5rem;
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.1rem;
       color: var(--dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
+    .faq-answer {
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Calculator Promo */
     .calculator-promo {
       background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
       padding: 2rem;
       border-radius: var(--radius);
       text-align: center;
-      margin: 2rem 0;
     }
 
     .calculator-promo h3 {
@@ -260,7 +428,7 @@
       font-size: 1.5rem;
     }
 
-    .calculator-promo a {
+    .cta-button {
       display: inline-block;
       background: white;
       color: var(--primary);
@@ -272,11 +440,67 @@
       transition: all 0.3s;
     }
 
-    .calculator-promo a:hover {
+    .cta-button:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
+    /* Sidebar Cards */
+    .sidebar-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .sidebar-card-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+    }
+
+    .sidebar-card-header h3 {
+      font-size: 1.2rem;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .sidebar-card-body {
+      padding: 1.5rem;
+    }
+
+    /* Ad Sections */
+    .ad-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .ad-label {
+      background: var(--light);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .ad-content {
+      padding: 2rem;
+      text-align: center;
+      color: var(--gray);
+      background: #f8f9fa;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Footer */
     footer {
       background: var(--dark);
       color: white;
@@ -286,7 +510,7 @@
     }
 
     .footer-content {
-      max-width: 800px;
+      max-width: 1400px;
       margin: 0 auto;
     }
 
@@ -314,36 +538,71 @@
       opacity: 0.8;
     }
 
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .main-container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        order: -1;
+      }
+    }
+
     @media (max-width: 768px) {
-      h1 {
-        font-size: 1.8rem;
+      .header-content {
+        flex-direction: column;
+        gap: 1rem;
       }
-      
-      .container {
-        margin: 1rem auto;
+
+      .nav-links {
+        gap: 1rem;
       }
-      
-      .info-page {
-        padding: 1.5rem;
+
+      .contact-hero h1 {
+        font-size: 2rem;
       }
-      
-      .contact-info {
+
+      .contact-info-grid {
         grid-template-columns: 1fr;
+      }
+
+      .breadcrumbs {
+        padding: 1rem;
+      }
+
+      .breadcrumbs ol {
+        flex-wrap: wrap;
       }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 1.5rem;
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
       }
-      
-      .tagline {
-        font-size: 0.9rem;
+
+      .contact-hero h1 {
+        font-size: 1.8rem;
       }
-      
+
+      .contact-hero p {
+        font-size: 1rem;
+      }
+
       .footer-links {
         flex-direction: column;
         gap: 0.5rem;
+      }
+
+      .card-body {
+        padding: 1rem;
+      }
+
+      .contact-form {
+        padding: 1.5rem;
       }
     }
   </style>
@@ -353,128 +612,362 @@
   <!-- Accessibility: Skip to main content -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- Breadcrumb Navigation -->
+  <nav aria-label="Breadcrumb" class="breadcrumbs">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="https://weightlosspercent.com/"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <span>›</span>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="https://weightlosspercent.com/contact"><span itemprop="name">Contact Us</span></a>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </nav>
+
   <header>
     <div class="header-content">
-      <h1><i class="fas fa-envelope" aria-hidden="true"></i> Contact Us</h1>
-      <p class="tagline">Get in touch with questions, feedback, or suggestions about our weight loss calculator</p>
+      <a href="https://weightlosspercent.com/" class="logo">
+        <i class="fas fa-weight" aria-hidden="true"></i>
+        <h1>WeightLossPercent</h1>
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="https://weightlosspercent.com/">Calculator</a></li>
+          <li><a href="https://weightlosspercent.com/blog">Blog</a></li>
+          <li><a href="https://weightlosspercent.com/about">About</a></li>
+          <li><a href="https://weightlosspercent.com/contact" class="active">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <main id="main-content">
-    <div class="container">
-      <a href="index.html" class="back-link">
-        <i class="fas fa-arrow-left" aria-hidden="true"></i> Back to Weight Loss Calculator
-      </a>
-
-      <div class="info-page">
-        <h1>Get In Touch</h1>
-        <p>We'd love to hear from you! Whether you have questions about our <a href="index.html">weight loss calculator</a>, suggestions for improvement, or just want to share your success story, we're here to help.</p>
+    <div class="main-container">
+      <!-- Left Content Area -->
+      <div class="content-area">
         
-        <div class="contact-info">
+        <!-- Contact Hero -->
+        <section class="contact-hero">
+          <h1><i class="fas fa-envelope" aria-hidden="true"></i> Contact Us</h1>
+          <p>Get in touch with questions, feedback, or suggestions about our weight loss calculator</p>
+        </section>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-info-grid">
           <div class="contact-card">
             <i class="fas fa-comments" aria-hidden="true"></i>
             <h3>General Questions</h3>
-            <p>Have questions about how to use our calculator or interpret your results?</p>
+            <p>Have questions about how to use our calculator or interpret your results? We're here to help!</p>
           </div>
           
           <div class="contact-card">
             <i class="fas fa-lightbulb" aria-hidden="true"></i>
             <h3>Suggestions</h3>
-            <p>Have ideas to make our weight loss calculator even better?</p>
+            <p>Have ideas to make our weight loss calculator even better? We'd love to hear them!</p>
           </div>
           
           <div class="contact-card">
             <i class="fas fa-bug" aria-hidden="true"></i>
             <h3>Report Issues</h3>
-            <p>Found a bug or technical issue with our calculator?</p>
+            <p>Found a bug or technical issue with our calculator? Let us know so we can fix it!</p>
           </div>
         </div>
-        
-        <h2>Send Us a Message</h2>
-        <p>Fill out the form below and we'll get back to you as soon as possible.</p>
-        
-        <div class="contact-form">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" placeholder="Enter your name">
+
+        <!-- Contact Form -->
+        <section class="contact-form">
+          <div class="card-header">
+            <h2><i class="fas fa-paper-plane" aria-hidden="true"></i> Send Us a Message</h2>
           </div>
-          
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="Enter your email">
+          <div class="card-body">
+            <p>Fill out the form below and we'll get back to you as soon as possible. We typically respond within 24-48 hours.</p>
+            
+            <div class="form-group">
+              <label for="name">Your Name *</label>
+              <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" required>
+                <option value="">Select a topic</option>
+                <option value="general">General Question</option>
+                <option value="suggestion">Feature Suggestion</option>
+                <option value="bug">Report a Bug</option>
+                <option value="partnership">Partnership Inquiry</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" rows="6" placeholder="Tell us what's on your mind..." required></textarea>
+            </div>
+            
+            <button onclick="submitContactForm()">
+              <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
+            </button>
           </div>
-          
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="What is this regarding?">
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="6" placeholder="Tell us what's on your mind..."></textarea>
-          </div>
-          
-          <button onclick="submitContactForm()">
-            <i class="fas fa-paper-plane" aria-hidden="true"></i> Send Message
-          </button>
-        </div>
-        
+        </section>
+
+        <!-- Success Message -->
         <div class="success-message" id="successMessage">
-          <p><strong>Thank you for your message!</strong> We've received your inquiry and will get back to you as soon as possible.</p>
+          <h3><i class="fas fa-check-circle" aria-hidden="true"></i> Thank You!</h3>
+          <p>We've received your message and will get back to you as soon as possible. For technical issues, we may need additional time to investigate and resolve the problem.</p>
+          <p style="margin-top: 1rem;"><strong>Response Time:</strong> We typically respond within 24-48 hours.</p>
         </div>
-        
-        <h2>Frequently Asked Questions</h2>
-        <p>Before contacting us, you might find answers to common questions in our resources:</p>
-        <ul>
-          <li><a href="index.html">How to use our weight loss calculator</a></li>
-          <li><a href="about.html">About our tool and mission</a></li>
-          <li><a href="privacy.html">Our privacy policy and data handling</a></li>
-        </ul>
-        
-        <div class="calculator-promo">
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2><i class="fas fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</h2>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> How do I calculate my weight loss percentage?
+            </div>
+            <div class="faq-answer">
+              Use our <a href="https://weightlosspercent.com/">free calculator</a> or the formula: (Starting Weight - Current Weight) ÷ Starting Weight × 100. For example: Starting 200 lbs, Current 180 lbs = 20 lbs lost (10%).
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> Is my weight data stored when I use the calculator?
+            </div>
+            <div class="faq-answer">
+              No! Your data never leaves your device. We believe in complete privacy - no registration, no data storage, no tracking.
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> Can I use the calculator on mobile devices?
+            </div>
+            <div class="faq-answer">
+              Yes! Our calculator is fully responsive and works perfectly on all devices - smartphones, tablets, and desktop computers.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> Is the weight loss calculator really free?
+            </div>
+            <div class="faq-answer">
+              Absolutely! Our calculator is completely free with no hidden costs, no registration required, and no premium features. We believe health tools should be accessible to everyone.
+            </div>
+          </div>
+        </section>
+
+        <!-- Calculator Promo -->
+        <section class="calculator-promo">
           <h3>Need to Calculate Your Weight Loss?</h3>
-          <p>While you're here, why not try our free calculator to see exactly how much weight you've lost?</p>
-          <a href="index.html">Calculate My Weight Loss</a>
+          <p>While you're here, why not try our free calculator to see exactly how many pounds you've lost and your weight loss percentage?</p>
+          <a href="https://weightlosspercent.com/" class="cta-button">
+            <i class="fas fa-calculator" aria-hidden="true"></i> Calculate My Weight Loss
+          </a>
+        </section>
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="sidebar">
+        
+        <!-- Top Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
         </div>
-        
-        <h2>Response Time</h2>
-        <p>We strive to respond to all inquiries within 24-48 hours. For technical issues, we may need additional time to investigate and resolve the problem.</p>
-        
-        <p>Thank you for using WeightLossCalc and for taking the time to reach out to us!</p>
+
+        <!-- Quick Help Card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-life-ring" aria-hidden="true"></i> Quick Help</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">Before Contacting Us</h4>
+                <p style="font-size: 0.9rem; color: var(--gray); margin: 0;">Check our resources for quick answers:</p>
+              </div>
+              
+              <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                <a href="https://weightlosspercent.com/blog#post1" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                  <i class="fas fa-book" aria-hidden="true"></i>
+                  How to Use Calculator
+                </a>
+                
+                <a href="https://weightlosspercent.com/blog#post3" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                  <i class="fas fa-chart-line" aria-hidden="true"></i>
+                  Tracking Tips
+                </a>
+                
+                <a href="https://weightlosspercent.com/about" style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary); text-decoration: none; font-size: 0.9rem;">
+                  <i class="fas fa-info-circle" aria-hidden="true"></i>
+                  About Our Tool
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Response Time Card -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-clock" aria-hidden="true"></i> Response Time</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>24-48 Hours</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">Typical response time</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-exclamation-triangle" style="color: var(--warning); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Technical Issues</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">May require additional time</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-envelope" style="color: var(--primary); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Email Confirmation</strong>
+                  <p style="font-size: 0.8rem; margin: 0.25rem 0 0 0; color: var(--gray);">Sent immediately after submission</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x600)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
+        <!-- Popular Articles -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-header">
+            <h3><i class="fas fa-fire" aria-hidden="true"></i> Popular Articles</h3>
+          </div>
+          <div class="sidebar-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post1" style="color: inherit; text-decoration: none;">Weight Loss Percentage Guide</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Step-by-step calculation guide</p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post3" style="color: inherit; text-decoration: none;">5 Tracking Methods</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Effective progress monitoring</p>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem;">
+                  <a href="https://weightlosspercent.com/blog#post2" style="color: inherit; text-decoration: none;">Pounds vs Kilograms</a>
+                </h4>
+                <p style="font-size: 0.8rem; color: var(--gray); margin: 0;">Which measurement is better?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
       </div>
     </div>
   </main>
 
   <footer>
     <div class="footer-content">
-      <p>WeightLossCalc - Free Weight Loss Percentage Calculator</p>
+      <p>WeightLossPercent.com - Calculate Exactly How Many Pounds You've Lost</p>
       <div class="footer-links">
-        <a href="index.html">Weight Loss Calculator</a>
-        <a href="blog.html">Weight Loss Blog</a>
-        <a href="about.html">About Us</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="https://weightlosspercent.com/">Calculator</a>
+        <a href="https://weightlosspercent.com/blog">Blog</a>
+        <a href="https://weightlosspercent.com/about">About Us</a>
+        <a href="https://weightlosspercent.com/privacy">Privacy Policy</a>
+        <a href="https://weightlosspercent.com/contact">Contact Us</a>
       </div>
-      <p class="copyright">&copy; 2025 WeightLossCalc | Free How Much Weight Have I Lost Calculator</p>
+      <p class="copyright">&copy; 2025 WeightLossPercent.com | Free Weight Loss Percentage Calculator Online</p>
     </div>
   </footer>
 
   <script>
     function submitContactForm() {
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+
+      // Simple validation
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
       // In a real implementation, this would send the form data to a server
       // For this demo, we'll just show a success message
       const successMessage = document.getElementById('successMessage');
       successMessage.classList.add('show');
       
       // Scroll to the success message
-      successMessage.scrollIntoView({ behavior: 'smooth' });
+      successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       
       // Clear the form
       document.getElementById('name').value = '';
       document.getElementById('email').value = '';
       document.getElementById('subject').value = '';
       document.getElementById('message').value = '';
+
+      // Log the form data (in real implementation, this would be a server request)
+      console.log('Contact Form Submitted:', {
+        name: name,
+        email: email,
+        subject: subject,
+        message: message,
+        timestamp: new Date().toISOString()
+      });
     }
+
+    // Add Enter key support for form submission
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' && event.target.tagName !== 'TEXTAREA') {
+        event.preventDefault();
+      }
+    });
   </script>
 
 </body>
