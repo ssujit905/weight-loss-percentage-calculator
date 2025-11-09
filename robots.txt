@@ -1,8 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ssujit905.github.io/weight-loss-percentage-calculator/sitemap.xml
+Sitemap: https://weightlosspercent.com/sitemap.xml
 
+# Allow major search engines
 User-agent: Googlebot
 Allow: /
 
@@ -15,11 +16,11 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# Block AI training bots
-User-agent: ChatGPT-User
+# Optional: Block AI training bots (safe)
+User-agent: GPTBot
 Disallow: /
 
-User-agent: GPTBot
+User-agent: ChatGPT-User
 Disallow: /
 
 User-agent: CCBot
