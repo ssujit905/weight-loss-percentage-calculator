@@ -3,41 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How Much Weight Have I Lost? Free Calculator | Pounds Lost & Weight Loss Percentage</title>
   
-  <!-- ✅ SEO Meta Tags -->
+  <!-- ✅ Updated SEO Meta Tags based on GSC data -->
+  <title>How Much Weight Have I Lost? | Pounds & KG Lost Calculator Guide</title>
   <meta name="description" content="Find out exactly how many pounds you've lost with our free calculator. Calculate weight loss percentage and pounds lost instantly. No signup required.">
+  
+  <!-- ✅ Enhanced Keyword Meta Tags -->
+  <meta name="description" content="Find out exactly how many pounds or kilograms you've lost. Simple guide + formula to calculate weight loss percentage, pounds lost, and KG lost instantly.">
+
+  
+  <!-- ✅ Canonical URL -->
   <link rel="canonical" href="https://weightlosspercent.com/" />
 
   <!-- ✅ Performance & SEO Meta -->
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
   <link rel="alternate" type="application/rss+xml" title="Weight Loss Blog RSS Feed" href="feed.xml" />
 
   <!-- ✅ Google Search Console Verification -->
   <meta name="google-site-verification" content="QMmaZolg8HGhvvGWzxlxKNt7-nEpplb8xtWNvCj8V1g" />
 
-  <!-- ✅ Google Analytics -->
+  <!-- ✅ Google Analytics with Enhanced Ecommerce Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', 'G-NGE8233VFP');
+    gtag('config', 'G-NGE8233VFP', {
+      page_title: document.title,
+      page_location: location.href
+    });
+    
+    // Track calculator usage
+    function trackCalculatorUsage(startWeight, currentWeight, weightLoss, percentage) {
+      gtag('event', 'calculator_used', {
+        'event_category': 'engagement',
+        'event_label': 'weight_loss_calculator',
+        'value': percentage,
+        'custom_parameters': {
+          'start_weight': startWeight,
+          'current_weight': currentWeight,
+          'weight_loss': weightLoss,
+          'percentage': percentage
+        }
+      });
+    }
   </script>
 
-  <!-- ✅ Open Graph / Facebook -->
+  <!-- ✅ Enhanced Open Graph / Facebook -->
   <meta property="og:title" content="How Much Weight Have I Lost? Free Calculator | Pounds Lost & Weight Loss Percentage" />
   <meta property="og:description" content="Find out exactly how many pounds you've lost with our free calculator. Calculate weight loss percentage and pounds lost instantly. No signup required." />
   <meta property="og:url" content="https://weightlosspercent.com/" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="weightlosslogo.png" />
+  <meta property="og:image" content="https://weightlosspercent.com/weightlosslogo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="WeightLossPercent" />
 
-  <!-- ✅ Twitter -->
+  <!-- ✅ Enhanced Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="How Much Weight Have I Lost? Free Calculator | Pounds Lost & Weight Loss Percentage" />
   <meta name="twitter:description" content="Find out exactly how many pounds you've lost with our free calculator. Calculate weight loss percentage and pounds lost instantly. No signup required." />
-  <meta name="twitter:image" content="weightlosslogo.png" />
+  <meta name="twitter:image" content="https://weightlosspercent.com/weightlosslogo.png" />
+  <meta name="twitter:site" content="@weightlosspercent" />
 
   <!-- ✅ Enhanced Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -49,9 +77,15 @@
     "description": "Free online tool to calculate how many pounds you've lost and your weight loss percentage instantly",
     "applicationCategory": "HealthApplication",
     "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
     "creator": {
-      "@type": "Person",
-      "name": "WeightLossPercent Team"
+      "@type": "Organization",
+      "name": "WeightLossPercent",
+      "url": "https://weightlosspercent.com/"
     },
     "mainEntity": {
       "@type": "FAQPage",
@@ -79,11 +113,31 @@
             "@type": "Answer",
             "text": "Use our calculator or the formula: (Starting Weight - Current Weight) ÷ Starting Weight × 100. Get instant results showing your weight loss percentage."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this weight loss calculator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Our weight loss calculator is completely free with no registration required. Calculate exactly how many pounds you've lost and your weight loss percentage instantly with no hidden costs."
+          }
         }
       ]
+    },
+    "potentialAction": {
+      "@type": "UseAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://weightlosspercent.com/",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
     }
   }
   </script>
+
   <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -823,6 +877,25 @@
       opacity: 0.8;
     }
 
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+      background: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .breadcrumb a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
     /* Responsive Design */
     @media (max-width: 1024px) {
       .main-container {
@@ -951,6 +1024,11 @@
     <div class="main-container">
       <!-- Left Content Area -->
       <div class="content-area">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="https://weightlosspercent.com/">Home</a> > How Much Weight Have I Lost Calculator
+        </nav>
         
         <!-- Keyword Section -->
         <section class="keyword-section">
@@ -1353,7 +1431,6 @@
       <p>How Much Weight Have I Lost Calculator - Track Exactly How Many Pounds You've Lost</p>
       <div class="footer-links">
         <a href="https://weightlosspercent.com/">Weight Loss Calculator</a>
-        <a href="https://weightlosspercent.com/blogs.html">Weight Loss Blog</a>
         <a href="https://weightlosspercent.com/about.html">About Us</a>
         <a href="https://weightlosspercent.com/my-post.html">Posts</a>
         <a href="https://weightlosspercent.com/privacy.html">Privacy Policy</a>
@@ -1459,6 +1536,9 @@
       
       // Show result container
       document.getElementById('resultContainer').classList.add('show');
+      
+      // Track calculator usage in Google Analytics
+      trackCalculatorUsage(start, current, lost, percentage);
       
       // Scroll to results
       document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
