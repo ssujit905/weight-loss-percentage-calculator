@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⚖️ Pounds Lost Calculator: How Many Pounds Have I Lost? Free Tool</title>
+  
+  <!-- ✅ HIGH-CTR SEO Meta Tags -->
+  <meta name="description" content="💪 Find out EXACTLY how many pounds you've lost! Instant calculator shows pounds lost from starting weight. Free, private, no signup required.">
+  <meta name="keywords" content="how many pounds have i lost, pounds lost calculator, how many pounds did i lose, how many lb have i lost, how much weight have i lost in pounds, how many pounds have i lost calculator, pounds lost, weight loss pounds calculator">
+  <link rel="canonical" href="https://weightlosspercent.com/pounds-lost-calculator" />
+
+  <!-- Favicon & Meta -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="weightlosslogo.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="weightlosslogo.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="weightlosslogo.png?v=2">
+  <link rel="icon" type="image/png" sizes="192x192" href="weightlosslogo.png?v=2">
+  <link rel="icon" type="image/png" sizes="512x512" href="weightlosslogo.png?v=2">
+
+  <!-- Performance & SEO Meta -->
+  <meta name="robots" content="index, follow">
+  
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NGE8233VFP');
+  </script>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Pounds Lost Calculator: How Many Pounds Have I Lost? Free Tool" />
+  <meta property="og:description" content="Find out EXACTLY how many pounds you've lost! Instant calculator shows pounds lost from starting weight." />
+  <meta property="og:url" content="https://weightlosspercent.com/pounds-lost-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="weightlosslogo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Pounds Lost Calculator: How Many Pounds Have I Lost? Free Tool" />
+  <meta name="twitter:description" content="Find out EXACTLY how many pounds you've lost! Instant calculator shows pounds lost from starting weight." />
+  <meta name="twitter:image" content="weightlosslogo.png" />
+
+  <!-- Enhanced Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Pounds Lost Calculator - Free Tool",
+    "url": "https://weightlosspercent.com/pounds-lost-calculator",
+    "description": "Free online tool to calculate exactly how many pounds you've lost from your starting weight",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "creator": {
+      "@type": "Person",
+      "name": "WeightLossPercent Team"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --secondary: #FF6B6B;
+      --accent: #6C63FF;
+      --light: #F8F9FA;
+      --dark: #343A40;
+      --gray: #6C757D;
+      --success: #28A745;
+      --warning: #FFC107;
+      --danger: #DC3545;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Layout */
+    .main-container {
+      display: flex;
+      max-width: 1400px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      gap: 2rem;
+      flex: 1;
+    }
+
+    .content-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar {
+      width: 350px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Calculator Card */
+    .calculator-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .card-header {
+      background: var(--light);
+      padding: 1.5rem;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .card-header h2 {
+      color: var(--dark);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .card-header h2 i {
+      color: var(--primary);
+    }
+
+    .card-body {
+      padding: 1.5rem;
+    }
+
+    .user-intent-text {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--dark);
+      font-weight: 500;
+      padding: 0.5rem;
+      background: rgba(76, 175, 80, 0.05);
+      border-radius: var(--radius);
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .input-with-icon {
+      position: relative;
+    }
+
+    .input-with-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray);
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px 12px 45px;
+      border: 2px solid #E9ECEF;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    }
+
+    button {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 6px rgba(76, 175, 80, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(76, 175, 80, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .result-container {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      background: var(--light);
+      display: none;
+    }
+
+    .result-container.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .result-value {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0.5rem 0;
+    }
+
+    .result-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .pounds-result {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .progress-container {
+      margin: 1.5rem 0;
+    }
+
+    .progress-bar {
+      height: 12px;
+      background: #E9ECEF;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+      border-radius: 6px;
+      transition: width 1s ease-in-out;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: var(--gray);
+    }
+
+    .motivation-message {
+      font-style: italic;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--primary);
+    }
+
+    /* Content Cards */
+    .content-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .content-card .card-body {
+      padding: 1.5rem;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    /* Blog Cards in Sidebar */
+    .blog-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .blog-card-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1rem 1.5rem;
+    }
+
+    .blog-card-header h3 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .blog-card-body {
+      padding: 1.5rem;
+    }
+
+    .blog-card p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .blog-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .blog-card-link:hover {
+      color: var(--primary-dark);
+    }
+
+    /* Ad Sections */
+    .ad-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .ad-label {
+      background: var(--light);
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      color: var(--gray);
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .ad-content {
+      padding: 2rem;
+      text-align: center;
+      color: var(--gray);
+      background: #f8f9fa;
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-answer {
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Content Sections */
+    .content-section {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .content-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .content-block {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .content-block h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block h3 i {
+      color: var(--primary);
+    }
+
+    .content-block p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .tip-box {
+      background: rgba(76, 175, 80, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .tip-box strong {
+      color: var(--primary);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .main-container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        order: -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .main-container {
+        margin: 1rem auto;
+      }
+      
+      .card-body {
+        padding: 1rem;
+      }
+      
+      .result-value {
+        font-size: 2rem;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .content-section {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .tagline {
+        font-size: 0.9rem;
+      }
+      
+      .user-intent-text {
+        font-size: 1rem;
+      }
+      
+      .content-section {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessibility: Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-weight" aria-hidden="true"></i> Pounds Lost Calculator</h1>
+      <p class="tagline">Find out exactly how many pounds you've lost instantly - free calculator</p>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="main-container">
+      <!-- Left Content Area -->
+      <div class="content-area">
+        
+        <!-- Example Section -->
+        <section class="example-section">
+          <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> Quick Example: How Many Pounds Have I Lost?</h3>
+          <p>See how it works: If you started at <strong>200 lbs</strong> and now weigh <strong>180 lbs</strong></p>
+          <div class="example-grid">
+            <div class="example-card">
+              <div class="pounds">20 lbs</div>
+              <div class="percentage">Pounds Lost</div>
+            </div>
+            <div class="example-card">
+              <div class="pounds">10%</div>
+              <div class="percentage">Weight Loss Percentage</div>
+            </div>
+          </div>
+          <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);">Try it yourself below to find out exactly how many pounds you've lost!</p>
+        </section>
+
+        <!-- Calculator Card -->
+        <div class="calculator-card">
+          <div class="card-header">
+            <h2><i class="fas fa-calculator" aria-hidden="true"></i> Pounds Lost Calculator</h2>
+          </div>
+          <div class="card-body">
+            <!-- User Intent Alignment -->
+            <div class="user-intent-text">
+              <i class="fas fa-search" aria-hidden="true"></i> Find out exactly how many pounds you have lost from your starting weight.
+            </div>
+
+            <div class="input-group">
+              <label for="startWeight">Starting Weight (pounds)</label>
+              <div class="input-with-icon">
+                <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                <input type="number" id="startWeight" placeholder="e.g. 200" step="0.1" min="0" aria-label="Enter your starting weight in pounds">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="currentWeight">Current Weight (pounds)</label>
+              <div class="input-with-icon">
+                <i class="fas fa-weight" aria-hidden="true"></i>
+                <input type="number" id="currentWeight" placeholder="e.g. 180" step="0.1" min="0" aria-label="Enter your current weight in pounds">
+              </div>
+            </div>
+
+            <button onclick="calculatePoundsLost()" aria-label="Calculate how many pounds you've lost">
+              <i class="fas fa-bolt" aria-hidden="true"></i> Calculate My Pounds Lost
+            </button>
+
+            <div class="result-container" id="resultContainer" aria-live="polite">
+              <div class="result-value" id="resultValue">0 lbs</div>
+              <div class="pounds-result" id="poundsResult"></div>
+              <div class="result-text" id="resultText"></div>
+              
+              <div class="progress-container">
+                <div class="progress-bar">
+                  <div class="progress-fill" id="progressFill" style="width: 0%" aria-hidden="true"></div>
+                </div>
+                <div class="progress-labels">
+                  <span>0 lbs</span>
+                  <span>Goal Weight</span>
+                </div>
+              </div>
+              
+              <div class="motivation-message" id="motivationMessage"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Depth Section -->
+        <section class="content-section">
+          <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Understanding Your Pounds Lost</h2>
+          
+          <div class="content-block">
+            <h3><i class="fas fa-question-circle" aria-hidden="true"></i> Why Track Exactly How Many Pounds You've Lost?</h3>
+            <p>Tracking exactly how many pounds you've lost gives you tangible evidence of your progress and helps maintain motivation throughout your weight loss journey.</p>
+            
+            <div class="tip-box">
+              <strong>Real Impact:</strong> Every 5 pounds lost is equivalent to about 20 sticks of butter or a car tire in weight reduction from your body!
+            </div>
+          </div>
+          
+          <div class="content-block">
+            <h3><i class="fas fa-calculator" aria-hidden="true"></i> How to Calculate Pounds Lost</h3>
+            <p>The formula for calculating pounds lost is simple:</p>
+            
+            <div style="background: var(--light); padding: 1.5rem; border-radius: var(--radius); margin: 1rem 0; text-align: center;">
+              <h4 style="color: var(--primary); margin-bottom: 1rem;">Pounds Lost Formula</h4>
+              <p style="font-size: 1.2rem; font-weight: 600;">Starting Weight - Current Weight = Pounds Lost</p>
+            </div>
+            
+            <p><strong>Example:</strong> If you started at 200 lbs and now weigh 180 lbs:</p>
+            <p>200 - 180 = 20 pounds lost</p>
+          </div>
+          
+          <div class="content-block">
+            <h3><i class="fas fa-trophy" aria-hidden="true"></i> Pounds Lost Milestones</h3>
+            <p>Here's what different amounts of pounds lost mean for your health and appearance:</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+              <div style="background: rgba(76, 175, 80, 0.1); padding: 1rem; border-radius: var(--radius); text-align: center;">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">5-10 lbs</h4>
+                <p style="font-size: 0.9rem;">Clothes fit better, more energy</p>
+              </div>
+              <div style="background: rgba(76, 175, 80, 0.2); padding: 1rem; border-radius: var(--radius); text-align: center;">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">10-20 lbs</h4>
+                <p style="font-size: 0.9rem;">Noticeable face and body changes</p>
+              </div>
+              <div style="background: rgba(76, 175, 80, 0.3); padding: 1rem; border-radius: var(--radius); text-align: center;">
+                <h4 style="color: var(--primary); margin-bottom: 0.5rem;">20+ lbs</h4>
+                <p style="font-size: 0.9rem;">Major health improvements</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <h2><i class="fas fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</h2>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> How many pounds have I lost?
+            </div>
+            <div class="faq-answer">
+              Use our calculator above to find out exactly how many pounds you've lost. Simply enter your starting weight and current weight to see the total pounds lost instantly.
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> How do I calculate how many pounds I've lost?
+            </div>
+            <div class="faq-answer">
+              Subtract your current weight from your starting weight. For example: Starting 200 lbs - Current 180 lbs = 20 pounds lost. Our calculator does this automatically for you.
+            </div>
+          </div>
+          
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> Is this pounds lost calculator free?
+            </div>
+            <div class="faq-answer">
+              Yes! Our pounds lost calculator is completely free with no registration required. Calculate exactly how many pounds you've lost instantly with no hidden costs.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <i class="fas fa-question" aria-hidden="true"></i> How often should I check how many pounds I've lost?
+            </div>
+            <div class="faq-answer">
+              We recommend weighing yourself once a week at the same time of day (morning after bathroom use is best). Daily weigh-ins can be discouraging due to normal fluctuations.
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Right Sidebar -->
+      <div class="sidebar">
+        
+        <!-- Top Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
+        <!-- Related Tools -->
+        <div class="blog-card">
+          <div class="blog-card-header">
+            <h3><i class="fas fa-tools" aria-hidden="true"></i> Related Tools</h3>
+          </div>
+          <div class="blog-card-body">
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">Weight Loss Percentage Calculator</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Calculate what percentage of body weight you've lost.</p>
+                <a href="https://weightlosspercent.com/weight-loss-percentage-calculator" class="blog-card-link">
+                  Try It <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">Main Weight Loss Calculator</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Calculate pounds lost and weight loss percentage.</p>
+                <a href="https://weightlosspercent.com/" class="blog-card-link">
+                  Try It <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+              
+              <div>
+                <h4 style="color: var(--dark); margin-bottom: 0.5rem; font-size: 1.1rem;">KG to Pounds Converter</h4>
+                <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Convert between kilograms and pounds.</p>
+                <a href="https://weightlosspercent.com/kg-to-pounds-converter" class="blog-card-link">
+                  Try It <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x600)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
+        <!-- Quick Tips Card -->
+        <div class="content-card">
+          <div class="card-header">
+            <h2><i class="fas fa-lightbulb" aria-hidden="true"></i> Pounds Lost Tips</h2>
+          </div>
+          <div class="card-body">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Track weekly</strong>
+                  <p style="font-size: 0.9rem; margin: 0.25rem 0 0 0; color: var(--gray);">Weigh yourself same day/time each week</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Celebrate every 5 lbs</strong>
+                  <p style="font-size: 0.9rem; margin: 0.25rem 0 0 0; color: var(--gray);">Small milestones keep you motivated</p>
+                </div>
+              </div>
+              
+              <div style="display: flex; align-items: start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--success); margin-top: 0.2rem;"></i>
+                <div>
+                  <strong>Take measurements too</strong>
+                  <p style="font-size: 0.9rem; margin: 0.25rem 0 0 0; color: var(--gray);">Sometimes inches lost matter more than pounds</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Ad Slot -->
+        <div class="ad-section">
+          <div class="ad-label">Advertisement</div>
+          <div class="ad-content">
+            <!-- Google AdSense will go here -->
+            <p>Ad Space (300x250)</p>
+            <small>Your advertisement will appear here</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Pounds Lost Calculator - Calculate Exactly How Many Pounds You've Lost</p>
+      <div class="footer-links">
+        <a href="https://weightlosspercent.com/">Weight Loss Calculator</a>
+        <a href="https://weightlosspercent.com/weight-loss-percentage-calculator">Weight Loss Percentage Calculator</a>
+        <a href="https://weightlosspercent.com/pounds-lost-calculator">Pounds Lost Calculator</a>
+        <a href="https://weightlosspercent.com/kg-to-pounds-converter">KG to Pounds Converter</a>
+        <a href="https://weightlosspercent.com/weekly-weight-loss-planner">Weekly Weight Loss Planner</a>
+        <a href="https://weightlosspercent.com/bmi-weight-loss-tool">BMI + Weight Loss Tool</a>
+        <a href="https://weightlosspercent.com/healthy-weight-loss-chart">Healthy Weight Loss Chart</a>
+        <a href="https://weightlosspercent.com/about.html">About Us</a>
+        <a href="https://weightlosspercent.com/privacy.html">Privacy Policy</a>
+        <a href="https://weightlosspercent.com/contact.html">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2025 WeightLossPercent.com | Free Pounds Lost Calculator</p>
+    </div>
+  </footer>
+
+  <script>
+    function calculatePoundsLost() {
+      const start = parseFloat(document.getElementById('startWeight').value);
+      const current = parseFloat(document.getElementById('currentWeight').value);
+      const resultContainer = document.getElementById('resultContainer');
+      const resultValue = document.getElementById('resultValue');
+      const poundsResult = document.getElementById('poundsResult');
+      const resultText = document.getElementById('resultText');
+      const progressFill = document.getElementById('progressFill');
+      const motivationMessage = document.getElementById('motivationMessage');
+
+      // Validation
+      if (isNaN(start) || isNaN(current) || start <= 0 || current < 0) {
+        showError("⚠️ Please enter valid weights to calculate how many pounds you've lost.");
+        return;
+      }
+
+      if (current > start) {
+        showError("Your current weight is higher than your starting weight. Have you gained weight?");
+        return;
+      }
+
+      // Calculate results
+      const loss = start - current;
+      const percentage = (loss / start) * 100;
+
+      // Update UI
+      resultValue.textContent = `${loss.toFixed(1)} lbs`;
+      poundsResult.textContent = `🎉 You lost ${loss.toFixed(1)} pounds!`;
+      resultText.textContent = `Starting: ${start} lbs → Current: ${current} lbs = ${loss.toFixed(1)} lbs lost`;
+      
+      // Animate progress bar (showing progress toward goal)
+      const goalWeight = start * 0.9; // 10% weight loss goal
+      const progress = ((start - current) / (start - goalWeight)) * 100;
+      progressFill.style.width = `${Math.min(progress, 100)}%`;
+      
+      // Set motivation message based on pounds lost
+      if (loss >= 20) {
+        motivationMessage.textContent = "🎉 Amazing! You've lost 20+ pounds - that's incredible progress!";
+        motivationMessage.style.borderLeftColor = "var(--success)";
+      } else if (loss >= 10) {
+        motivationMessage.textContent = "👍 Excellent work! You've lost 10+ pounds - keep up the great momentum!";
+        motivationMessage.style.borderLeftColor = "var(--primary)";
+      } else if (loss > 0) {
+        motivationMessage.textContent = "💪 Great start! Every pound lost is progress toward your goals. Keep going!";
+        motivationMessage.style.borderLeftColor = "var(--warning)";
+      } else {
+        motivationMessage.textContent = "🌟 Ready to start your journey? You've got this!";
+        motivationMessage.style.borderLeftColor = "var(--accent)";
+      }
+      
+      // Show results
+      resultContainer.classList.add('show');
+      
+      // Scroll to results
+      resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function showError(message) {
+      const resultContainer = document.getElementById('resultContainer');
+      const resultValue = document.getElementById('resultValue');
+      const poundsResult = document.getElementById('poundsResult');
+      const resultText = document.getElementById('resultText');
+      const motivationMessage = document.getElementById('motivationMessage');
+      
+      resultValue.textContent = "Error";
+      poundsResult.textContent = "";
+      resultText.textContent = message;
+      motivationMessage.textContent = "Please check your inputs and try again.";
+      motivationMessage.style.borderLeftColor = "var(--danger)";
+      
+      resultContainer.classList.add('show');
+      resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Allow Enter key to trigger calculation
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        calculatePoundsLost();
+      }
+    });
+  </script>
+
+</body>
+</html>
