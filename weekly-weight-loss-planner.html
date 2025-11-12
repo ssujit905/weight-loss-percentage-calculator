@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ✅ SEO Meta Tags -->
+  <title>Weekly Weight Loss Planner | Plan & Track Your Weekly Weight Loss Goals</title>
+  <meta name="description" content="Free Weekly Weight Loss Planner. Set goals, track progress, and plan your weekly weight loss journey. Stay motivated with our comprehensive planning tool.">
+  
+  <!-- ✅ Enhanced Keyword Meta Tags -->
+  <meta name="keywords" content="weekly weight loss planner, weight loss plan, weekly weight loss goals, weight loss tracker, diet planner, fitness planner">
+  
+  <!-- ✅ Canonical URL -->
+  <link rel="canonical" href="https://weightlosspercent.com/weekly-weight-loss-planner.html" />
+
+  <!-- ✅ Performance & SEO Meta -->
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  
+  <!-- ✅ Google Search Console Verification -->
+  <meta name="google-site-verification" content="QMmaZolg8HGhvvGWzxlxKNt7-nEpplb8xtWNvCj8V1g" />
+
+  <!-- ✅ Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NGE8233VFP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NGE8233VFP');
+    
+    // Track planner usage
+    function trackPlannerUsage(startWeight, goalWeight, weeks, weeklyGoal) {
+      gtag('event', 'planner_used', {
+        'event_category': 'engagement',
+        'event_label': 'weekly_weight_loss_planner',
+        'value': weeks,
+        'custom_parameters': {
+          'start_weight': startWeight,
+          'goal_weight': goalWeight,
+          'weeks': weeks,
+          'weekly_goal': weeklyGoal
+        }
+      });
+    }
+  </script>
+
+  <!-- ✅ Enhanced Open Graph / Facebook -->
+  <meta property="og:title" content="Weekly Weight Loss Planner | Plan & Track Your Weekly Weight Loss Goals" />
+  <meta property="og:description" content="Free Weekly Weight Loss Planner. Set goals, track progress, and plan your weekly weight loss journey. Stay motivated with our comprehensive planning tool." />
+  <meta property="og:url" content="https://weightlosspercent.com/weekly-weight-loss-planner.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://weightlosspercent.com/weightlosslogo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="WeightLossPercent" />
+
+  <!-- ✅ Enhanced Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Weekly Weight Loss Planner | Plan & Track Your Weekly Weight Loss Goals" />
+  <meta name="twitter:description" content="Free Weekly Weight Loss Planner. Set goals, track progress, and plan your weekly weight loss journey. Stay motivated with our comprehensive planning tool." />
+  <meta name="twitter:image" content="https://weightlosspercent.com/weightlosslogo.png" />
+  <meta name="twitter:site" content="@weightlosspercent" />
+
+  <!-- ✅ Enhanced Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Weekly Weight Loss Planner",
+    "url": "https://weightlosspercent.com/weekly-weight-loss-planner.html",
+    "description": "Free online tool to plan and track your weekly weight loss goals and progress",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "WeightLossPercent",
+      "url": "https://weightlosspercent.com/"
+    },
+    "mainEntity": {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much weight should I aim to lose per week?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A safe and sustainable rate of weight loss is 1-2 pounds (0.5-1 kg) per week. Losing weight gradually increases the likelihood of keeping it off long-term."
+          }
+        },
+        {
+          "@type": "Question", 
+          "name": "How do I create a weekly weight loss plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Set realistic goals, track your progress weekly, adjust your plan as needed, and focus on consistent healthy habits rather than rapid results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why use a weekly weight loss planner?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Weekly planning helps you stay organized, track progress, maintain motivation, and make adjustments to your weight loss strategy as needed."
+          }
+        }
+      ]
+    },
+    "potentialAction": {
+      "@type": "UseAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://weightlosspercent.com/weekly-weight-loss-planner.html",
+        "actionPlatform": [
+          "http://schema.org/DesktopWebPlatform",
+          "http://schema.org/MobileWebPlatform"
+        ]
+      }
+    }
+  }
+  </script>
+
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+  />
+
+  <style>
+    :root {
+      --primary: #FF6B35;
+      --primary-dark: #E55A2B;
+      --secondary: #00A8E8;
+      --accent: #4CAF50;
+      --light: #F8F9FA;
+      --dark: #343A40;
+      --gray: #6C757D;
+      --success: #28A745;
+      --warning: #FFC107;
+      --danger: #DC3545;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+      --gradient: linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #fff5f0 0%, #ffefe6 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 6px;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      border-radius: 4px;
+      z-index: 100;
+    }
+
+    .skip-link:focus {
+      top: 6px;
+    }
+
+    header {
+      background: var(--gradient);
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      transform: rotate(30deg);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .tagline {
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 600px;
+      margin: 0 auto 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-links a.active {
+      background: rgba(255, 255, 255, 0.3);
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .main-container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* Planner Section */
+    .planner-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .planner-section {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .planner-card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .planner-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .card-header {
+      background: var(--gradient);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .card-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-body {
+      padding: 2rem;
+    }
+
+    .planner-description {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: var(--gray);
+      font-size: 1.1rem;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    .input-with-icon {
+      position: relative;
+    }
+
+    .input-with-icon i {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gray);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 15px 12px 45px;
+      border: 2px solid #E9ECEF;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.2);
+    }
+
+    .unit-selector {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .unit-option {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      border: 2px solid #E9ECEF;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+    }
+
+    .unit-option.active {
+      border-color: var(--primary);
+      background-color: rgba(255, 107, 53, 0.1);
+      color: var(--primary);
+    }
+
+    button {
+      background: var(--gradient);
+      color: white;
+      border: none;
+      padding: 15px 20px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 6px rgba(255, 107, 53, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 8px rgba(255, 107, 53, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .result-container {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      background: var(--light);
+      display: none;
+    }
+
+    .result-container.show {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .plan-result {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 0.5rem 0;
+    }
+
+    .result-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .weekly-goal {
+      background: var(--primary);
+      color: white;
+      padding: 1rem;
+      border-radius: var(--radius);
+      margin: 1rem 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    .plan-visualization {
+      margin: 1.5rem 0;
+      padding: 1.5rem;
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-point {
+      text-align: center;
+      flex: 1;
+      padding: 1rem;
+    }
+
+    .timeline-value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .timeline-label {
+      font-size: 0.9rem;
+      color: var(--gray);
+      margin-top: 0.5rem;
+    }
+
+    .timeline-arrow {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin: 0 0.5rem;
+    }
+
+    .weekly-breakdown {
+      background: var(--light);
+      padding: 1rem;
+      border-radius: var(--radius);
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-top: 1rem;
+    }
+
+    .motivation-message {
+      font-style: italic;
+      margin-top: 1rem;
+      padding: 1rem;
+      background: white;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--primary);
+    }
+
+    /* Weekly Schedule */
+    .weekly-schedule {
+      margin-top: 2rem;
+    }
+
+    .schedule-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .schedule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+
+    .day-card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .day-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .day-name {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .day-weight {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    /* Info Section */
+    .info-section {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2rem;
+    }
+
+    .info-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .info-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .info-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .info-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+    }
+
+    /* Content Section */
+    .content-section {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .content-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .content-block {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .content-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .content-block h3 {
+      color: var(--dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    .content-block h3 i {
+      color: var(--primary);
+    }
+
+    .content-block p {
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .tip-box {
+      background: rgba(255, 107, 53, 0.05);
+      border-left: 4px solid var(--primary);
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .tip-box strong {
+      color: var(--primary);
+    }
+
+    /* FAQ Section */
+    .faq-section {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .faq-section h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-item {
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 1.5rem;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .faq-question {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-answer {
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    /* Calculator Links */
+    .calculator-links {
+      background: white;
+      padding: 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .calculator-links h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .calculator-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .calculator-link-card {
+      background: var(--light);
+      padding: 1.5rem;
+      border-radius: var(--radius);
+      text-align: center;
+      transition: all 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .calculator-link-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    .calculator-link-icon {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .calculator-link-card h3 {
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .calculator-link-card p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .calculator-link {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    .calculator-link:hover {
+      background: var(--primary-dark);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: auto;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 1rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--primary);
+    }
+
+    .copyright {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      .main-container {
+        margin: 1rem auto;
+      }
+      
+      .card-body {
+        padding: 1.5rem;
+      }
+      
+      .plan-result {
+        font-size: 1.8rem;
+      }
+      
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .content-section {
+        padding: 1.5rem;
+      }
+      
+      .calculator-links-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .timeline {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .timeline-arrow {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+      }
+      
+      .schedule-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      .tagline {
+        font-size: 0.9rem;
+      }
+      
+      .unit-selector {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      
+      .content-section {
+        padding: 1rem;
+      }
+      
+      .schedule-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Accessibility: Skip to main content -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header>
+    <div class="header-content">
+      <h1><i class="fas fa-calendar-week" aria-hidden="true"></i> Weekly Weight Loss Planner</h1>
+      <p class="tagline">Plan, track, and achieve your weekly weight loss goals with our comprehensive planner</p>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="posts.html">Blog</a>
+        <a href="weekly-weight-loss-planner.html" class="active">Weekly Planner</a>
+        <a href="calculators.html">All Calculators</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <div class="main-container">
+      
+      <!-- Planner Section -->
+      <section class="planner-section">
+        <div class="planner-card">
+          <div class="card-header">
+            <h2><i class="fas fa-chart-line" aria-hidden="true"></i> Create Your Weight Loss Plan</h2>
+            <p>Set your goals and create a personalized weekly weight loss plan</p>
+          </div>
+          <div class="card-body">
+            <div class="planner-description">
+              <p><i class="fas fa-search" aria-hidden="true"></i> Enter your current weight and goal weight to create a personalized weekly weight loss plan.</p>
+            </div>
+
+            <div class="unit-selector">
+              <div class="unit-option active" data-unit="lbs" role="button" tabindex="0" aria-label="Select pounds as weight unit">Pounds (lbs)</div>
+              <div class="unit-option" data-unit="kg" role="button" tabindex="0" aria-label="Select kilograms as weight unit">Kilograms (kg)</div>
+            </div>
+
+            <div class="input-group">
+              <label for="currentWeight">Current Weight</label>
+              <div class="input-with-icon">
+                <i class="fas fa-weight" aria-hidden="true"></i>
+                <input type="number" id="currentWeight" placeholder="e.g. 200" step="0.1" min="0" aria-label="Enter your current weight">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="goalWeight">Goal Weight</label>
+              <div class="input-with-icon">
+                <i class="fas fa-bullseye" aria-hidden="true"></i>
+                <input type="number" id="goalWeight" placeholder="e.g. 180" step="0.1" min="0" aria-label="Enter your goal weight">
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="weeklyGoal">Weekly Weight Loss Goal</label>
+              <div class="input-with-icon">
+                <i class="fas fa-tachometer-alt" aria-hidden="true"></i>
+                <select id="weeklyGoal" aria-label="Select your weekly weight loss goal">
+                  <option value="0.5">0.5 (Slow & Steady)</option>
+                  <option value="1" selected>1.0 (Recommended)</option>
+                  <option value="1.5">1.5 (Moderate)</option>
+                  <option value="2">2.0 (Aggressive)</option>
+                </select>
+              </div>
+            </div>
+
+            <button onclick="createPlan()" aria-label="Create weight loss plan">
+              <i class="fas fa-rocket" aria-hidden="true"></i> Create My Weight Loss Plan
+            </button>
+
+            <div class="result-container" id="resultContainer" aria-live="polite">
+              <div class="plan-result" id="planResult">0 Weeks</div>
+              <div class="result-text" id="resultText"></div>
+              <div class="weekly-goal" id="weeklyGoalResult"></div>
+              
+              <div class="plan-visualization">
+                <div class="timeline">
+                  <div class="timeline-point">
+                    <div class="timeline-value" id="startValue">0</div>
+                    <div class="timeline-label">Current Weight</div>
+                  </div>
+                  <div class="timeline-arrow">
+                    <i class="fas fa-arrow-right"></i>
+                  </div>
+                  <div class="timeline-point">
+                    <div class="timeline-value" id="goalValue">0</div>
+                    <div class="timeline-label">Goal Weight</div>
+                  </div>
+                </div>
+                <div class="weekly-breakdown" id="weeklyBreakdown">
+                  Weekly breakdown will appear here
+                </div>
+              </div>
+              
+              <div class="weekly-schedule" id="weeklySchedule">
+                <div class="schedule-header">
+                  <h3>Sample Weekly Tracking</h3>
+                </div>
+                <div class="schedule-grid" id="scheduleGrid">
+                  <!-- Weekly schedule will be generated here -->
+                </div>
+              </div>
+              
+              <div class="motivation-message" id="motivationMessage"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-section">
+          <h2><i class="fas fa-info-circle" aria-hidden="true"></i> Benefits of Weekly Planning</h2>
+          <div class="info-grid">
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-bullseye" aria-hidden="true"></i>
+              </div>
+              <h3>Clear Goals</h3>
+              <p>Weekly targets provide specific, achievable milestones that keep you focused and motivated</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-chart-line" aria-hidden="true"></i>
+              </div>
+              <h3>Progress Tracking</h3>
+              <p>Regular weekly check-ins help you monitor progress and make adjustments as needed</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-calendar-check" aria-hidden="true"></i>
+              </div>
+              <h3>Consistency</h3>
+              <p>Weekly planning establishes consistent habits that lead to long-term success</p>
+            </div>
+            
+            <div class="info-card">
+              <div class="info-icon">
+                <i class="fas fa-adjust" aria-hidden="true"></i>
+              </div>
+              <h3>Flexibility</h3>
+              <p>Weekly reviews allow you to adjust your plan based on what's working and what isn't</p>
+            </div>
+          </div>
+          
+          <div class="tip-box">
+            <strong>Planning Tip:</strong> Aim for a consistent 1-2 pound weight loss per week. This sustainable pace helps preserve muscle mass and increases the likelihood of maintaining your weight loss long-term.
+          </div>
+        </div>
+      </section>
+
+      <!-- Content Section -->
+      <section class="content-section">
+        <h2><i class="fas fa-book" aria-hidden="true"></i> Creating an Effective Weekly Weight Loss Plan</h2>
+        
+        <div class="content-block">
+          <h3><i class="fas fa-calculator" aria-hidden="true"></i> How to Set Realistic Weekly Goals</h3>
+          <p>Setting realistic weekly weight loss goals is crucial for long-term success. While it might be tempting to aim for rapid weight loss, sustainable results come from gradual, consistent progress.</p>
+          
+          <div class="tip-box">
+            <strong>Recommended Weekly Goals:</strong> 1-2 pounds (0.5-1 kg) per week is considered safe and sustainable. This equates to a daily calorie deficit of 500-1000 calories.
+          </div>
+          
+          <p>Factors to consider when setting your weekly goal:</p>
+          <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+            <li><strong>Starting weight:</strong> Those with more weight to lose may safely lose more initially</li>
+            <li><strong>Activity level:</strong> More active individuals may be able to sustain higher deficits</li>
+            <li><strong>Metabolism:</strong> Individual metabolic rates affect how quickly you can lose weight</li>
+            <li><strong>Lifestyle:</strong> Consider your schedule, stress levels, and sleep patterns</li>
+          </ul>
+        </div>
+        
+        <div class="content-block">
+          <h3><i class="fas fa-utensils" aria-hidden="true"></i> Weekly Nutrition Planning</h3>
+          <p>Successful weekly weight loss requires careful nutrition planning. Focus on creating a sustainable eating pattern rather than restrictive dieting.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+            <div style="background: rgba(255, 107, 53, 0.05); padding: 1rem; border-radius: var(--radius); text-align: center;">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Protein</h4>
+              <p style="font-size: 0.9rem;">Include lean protein with each meal to support muscle retention and satiety</p>
+            </div>
+            <div style="background: rgba(255, 107, 53, 0.1); padding: 1rem; border-radius: var(--radius); text-align: center;">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Vegetables</h4>
+              <p style="font-size: 0.9rem;">Fill half your plate with non-starchy vegetables for volume and nutrients</p>
+            </div>
+            <div style="background: rgba(255, 107, 53, 0.15); padding: 1rem; border-radius: var(--radius); text-align: center;">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Hydration</h4>
+              <p style="font-size: 0.9rem;">Drink adequate water throughout the day to support metabolism</p>
+            </div>
+            <div style="background: rgba(255, 107, 53, 0.2); padding: 1rem; border-radius: var(--radius); text-align: center;">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Planning</h4>
+              <p style="font-size: 0.9rem;">Plan meals in advance to avoid impulsive, less healthy choices</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="content-block">
+          <h3><i class="fas fa-running" aria-hidden="true"></i> Weekly Exercise Planning</h3>
+          <p>Combine your nutrition plan with regular physical activity for optimal results. A balanced exercise routine supports weight loss and overall health.</p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0;">
+            <div style="background: rgba(255, 107, 53, 0.05); padding: 1rem; border-radius: var(--radius);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Cardiovascular Exercise</h4>
+              <ul style="margin-left: 1rem;">
+                <li>150-300 minutes per week</li>
+                <li>Brisk walking, cycling, swimming</li>
+                <li>Burns calories and improves heart health</li>
+              </ul>
+            </div>
+            <div style="background: rgba(255, 107, 53, 0.05); padding: 1rem; border-radius: var(--radius);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Strength Training</h4>
+              <ul style="margin-left: 1rem;">
+                <li>2-3 sessions per week</li>
+                <li>Weight lifting, resistance bands</li>
+                <li>Builds muscle and boosts metabolism</li>
+              </ul>
+            </div>
+          </div>
+          
+          <p><strong>Remember:</strong> Consistency matters more than intensity. Find activities you enjoy and can maintain week after week.</p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section">
+        <h2><i class="fas fa-question-circle" aria-hidden="true"></i> Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> How much weight should I aim to lose per week?
+          </div>
+          <div class="faq-answer">
+            A safe and sustainable rate of weight loss is 1-2 pounds (0.5-1 kg) per week. Losing weight gradually increases the likelihood of keeping it off long-term and helps preserve muscle mass.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> How do I create a weekly weight loss plan?
+          </div>
+          <div class="faq-answer">
+            Start by setting realistic goals using our planner above. Then focus on creating a calorie deficit through nutrition and increasing physical activity. Track your progress weekly and adjust your plan as needed based on your results.
+          </div>
+        </div>
+        
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> Why use a weekly weight loss planner?
+          </div>
+          <div class="faq-answer">
+            Weekly planning helps you stay organized, track progress, maintain motivation, and make adjustments to your weight loss strategy as needed. It breaks down a large goal into manageable weekly targets, making the process less overwhelming.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <i class="fas fa-question" aria-hidden="true"></i> What if I don't reach my weekly goal?
+          </div>
+          <div class="faq-answer">
+            Don't get discouraged! Weight loss isn't always linear. If you don't reach your weekly goal, assess what might have contributed (stress, sleep, hydration, etc.) and adjust your plan for the following week. Consistency over time matters more than any single week's results.
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator Links -->
+      <section class="calculator-links">
+        <h2><i class="fas fa-calculator" aria-hidden="true"></i> More Weight Loss Calculators</h2>
+        <p>Explore our full collection of free weight loss tools:</p>
+        <div class="calculator-links-grid">
+          <div class="calculator-link-card">
+            <div class="calculator-link-icon">
+              <i class="fas fa-percentage" aria-hidden="true"></i>
+            </div>
+            <h3>Weight Loss Percentage Calculator</h3>
+            <p>Calculate your weight loss as a percentage of your starting weight</p>
+            <a href="percent-weight-loss-calculator.html" class="calculator-link">Use Calculator</a>
+          </div>
+          
+          <div class="calculator-link-card">
+            <div class="calculator-link-icon">
+              <i class="fas fa-weight" aria-hidden="true"></i>
+            </div>
+            <h3>Pounds Lost Calculator</h3>
+            <p>Find out exactly how many pounds you've lost</p>
+            <a href="pounds-lost-calculator.html" class="calculator-link">Use Calculator</a>
+          </div>
+          
+          <div class="calculator-link-card">
+            <div class="calculator-link-icon">
+              <i class="fas fa-exchange-alt" aria-hidden="true"></i>
+            </div>
+            <h3>KG to Pounds Converter</h3>
+            <p>Convert your weight loss between kilograms and pounds</p>
+            <a href="kg-to-pounds-weight-loss-converter.html" class="calculator-link">Use Converter</a>
+          </div>
+          
+          <div class="calculator-link-card">
+            <div class="calculator-link-icon">
+              <i class="fas fa-heartbeat" aria-hidden="true"></i>
+            </div>
+            <h3>BMI Calculator</h3>
+            <p>Calculate BMI and get personalized weight loss recommendations</p>
+            <a href="bmi-weight-loss-tool.html" class="calculator-link">Use Calculator</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>Weekly Weight Loss Planner - Free Tool to Plan and Track Your Weekly Weight Loss Goals</p>
+      <div class="footer-links">
+        <a href="https://weightlosspercent.com/">Home</a>
+        <a href="https://weightlosspercent.com/posts.html">Blog Posts</a>
+        <a href="https://weightlosspercent.com/calculators.html">Calculators</a>
+        <a href="https://weightlosspercent.com/about.html">About Us</a>
+        <a href="https://weightlosspercent.com/privacy.html">Privacy Policy</a>
+        <a href="https://weightlosspercent.com/contact.html">Contact Us</a>
+      </div>
+      <p class="copyright">&copy; 2025 WeightLossPercent.com | Free Weekly Weight Loss Planner</p>
+    </div>
+  </footer>
+
+  <script>
+    // Unit selector toggle
+    document.querySelectorAll('.unit-option').forEach(el => {
+      el.addEventListener('click', () => {
+        document.querySelectorAll('.unit-option').forEach(o => o.classList.remove('active'));
+        el.classList.add('active');
+        
+        // Update placeholders based on selected unit
+        const unit = el.dataset.unit;
+        if (unit === 'lbs') {
+          document.getElementById('currentWeight').placeholder = 'e.g. 200';
+          document.getElementById('goalWeight').placeholder = 'e.g. 180';
+        } else {
+          document.getElementById('currentWeight').placeholder = 'e.g. 90';
+          document.getElementById('goalWeight').placeholder = 'e.g. 81';
+        }
+      });
+      
+      // Add keyboard accessibility
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          el.click();
+        }
+      });
+    });
+
+    function createPlan() {
+      const current = parseFloat(document.getElementById('currentWeight').value);
+      const goal = parseFloat(document.getElementById('goalWeight').value);
+      const weeklyGoal = parseFloat(document.getElementById('weeklyGoal').value);
+      const unit = document.querySelector('.unit-option.active').dataset.unit;
+
+      // Validation
+      if (isNaN(current) || isNaN(goal) || current <= 0 || goal < 0) {
+        showError("Please enter valid weights to create your weight loss plan.");
+        return;
+      }
+
+      if (goal >= current) {
+        showError("Your goal weight should be less than your current weight.");
+        return;
+      }
+
+      // Calculate results
+      const totalLoss = current - goal;
+      const weeks = Math.ceil(totalLoss / weeklyGoal);
+      const unitSymbol = unit === 'lbs' ? 'lbs' : 'kg';
+
+      // Update UI
+      document.getElementById('planResult').textContent = `${weeks} Weeks`;
+      document.getElementById('resultText').textContent = `It will take approximately ${weeks} weeks to reach your goal weight.`;
+      document.getElementById('weeklyGoalResult').textContent = `Weekly Goal: ${weeklyGoal} ${unitSymbol} per week`;
+      
+      document.getElementById('startValue').textContent = `${current} ${unitSymbol}`;
+      document.getElementById('goalValue').textContent = `${goal} ${unitSymbol}`;
+      
+      // Generate weekly breakdown
+      let breakdownText = `You'll lose ${totalLoss.toFixed(1)} ${unitSymbol} total`;
+      document.getElementById('weeklyBreakdown').textContent = breakdownText;
+
+      // Generate weekly schedule
+      generateWeeklySchedule(current, goal, weeks, unitSymbol);
+
+      // Set motivation message based on weeks
+      const motivationMessage = document.getElementById('motivationMessage');
+      if (weeks <= 8) {
+        motivationMessage.textContent = "🎉 You can reach your goal in just a couple of months! Stay consistent and you'll be there before you know it!";
+        motivationMessage.style.borderLeftColor = "var(--success)";
+      } else if (weeks <= 16) {
+        motivationMessage.textContent = "👍 This is a perfect timeframe for sustainable weight loss! You'll build lasting habits along the way.";
+        motivationMessage.style.borderLeftColor = "var(--primary)";
+      } else if (weeks <= 24) {
+        motivationMessage.textContent = "💪 This timeline allows for steady, sustainable progress. Remember, slow and steady wins the race!";
+        motivationMessage.style.borderLeftColor = "var(--primary)";
+      } else {
+        motivationMessage.textContent = "🌟 You're making a long-term commitment to your health! This extended timeline will help you build habits that last a lifetime.";
+        motivationMessage.style.borderLeftColor = "var(--warning)";
+      }
+      
+      // Show result container
+      document.getElementById('resultContainer').classList.add('show');
+      
+      // Track planner usage in Google Analytics
+      trackPlannerUsage(current, goal, weeks, weeklyGoal);
+      
+      // Scroll to results
+      document.getElementById('resultContainer').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function generateWeeklySchedule(current, goal, weeks, unit) {
+      const scheduleGrid = document.getElementById('scheduleGrid');
+      scheduleGrid.innerHTML = '';
+      
+      const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+      const weeklyLoss = (current - goal) / weeks;
+      
+      // Create day cards for the first week
+      days.forEach(day => {
+        const dayCard = document.createElement('div');
+        dayCard.className = 'day-card';
+        
+        const dayName = document.createElement('div');
+        dayName.className = 'day-name';
+        dayName.textContent = day;
+        
+        const dayWeight = document.createElement('div');
+        dayWeight.className = 'day-weight';
+        
+        // For demonstration, show current weight for all days
+        // In a real app, you might calculate projected weights
+        dayWeight.textContent = `${current.toFixed(1)} ${unit}`;
+        
+        dayCard.appendChild(dayName);
+        dayCard.appendChild(dayWeight);
+        scheduleGrid.appendChild(dayCard);
+      });
+    }
+
+    function showError(message) {
+      const resultContainer = document.getElementById('resultContainer');
+      const planResult = document.getElementById('planResult');
+      const resultText = document.getElementById('resultText');
+      const weeklyGoalResult = document.getElementById('weeklyGoalResult');
+      const motivationMessage = document.getElementById('motivationMessage');
+      
+      planResult.textContent = "Error";
+      resultText.textContent = message;
+      weeklyGoalResult.textContent = "";
+      motivationMessage.textContent = "Please check your inputs and try again.";
+      motivationMessage.style.borderLeftColor = "var(--danger)";
+      
+      resultContainer.classList.add('show');
+      resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    // Allow Enter key to trigger plan creation
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter') {
+        createPlan();
+      }
+    });
+
+    // Set default to pounds on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const poundsOption = document.querySelector('.unit-option[data-unit="lbs"]');
+      if (poundsOption) {
+        poundsOption.click();
+      }
+    });
+  </script>
+
+</body>
+</html>
