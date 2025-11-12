@@ -270,6 +270,7 @@
       display: flex;
       flex-direction: column;
       height: 100%;
+      cursor: pointer;
     }
 
     .post-card:hover {
@@ -314,19 +315,6 @@
       flex-grow: 1;
     }
 
-    .post-content {
-      color: var(--dark);
-      line-height: 1.7;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.5s ease;
-    }
-
-    .post-content.expanded {
-      max-height: 1000px;
-      margin-bottom: 1.5rem;
-    }
-
     .read-more-btn {
       background: var(--primary);
       color: white;
@@ -349,12 +337,116 @@
       box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
     }
 
-    .read-more-btn i {
-      transition: transform 0.3s;
+    /* Full Screen Modal */
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 1rem;
+      overflow-y: auto;
     }
 
-    .read-more-btn.expanded i {
-      transform: rotate(180deg);
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: white;
+      border-radius: var(--radius);
+      width: 100%;
+      max-width: 900px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .modal-header h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .modal-meta i {
+      margin-right: 0.25rem;
+    }
+
+    .modal-body {
+      padding: 2rem;
+      line-height: 1.7;
+    }
+
+    .modal-body p {
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-body h3 {
+      color: var(--primary);
+      margin: 2rem 0 1rem;
+      font-size: 1.4rem;
+    }
+
+    .modal-body ul, .modal-body ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .modal-body li {
+      margin-bottom: 0.5rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 11;
+    }
+
+    .modal-close:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: rotate(90deg);
     }
 
     /* Category Filters */
@@ -446,6 +538,18 @@
       .page-header h2 {
         font-size: 1.7rem;
       }
+      
+      .modal-header {
+        padding: 1.25rem 1.5rem;
+      }
+      
+      .modal-header h2 {
+        font-size: 1.5rem;
+      }
+      
+      .modal-body {
+        padding: 1.5rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -463,6 +567,18 @@
       
       .footer-links {
         gap: 1rem;
+      }
+      
+      .modal-header {
+        padding: 1rem 1.25rem;
+      }
+      
+      .modal-header h2 {
+        font-size: 1.3rem;
+      }
+      
+      .modal-body {
+        padding: 1.25rem;
       }
     }
   </style>
@@ -507,7 +623,7 @@
       <div class="posts-grid">
         
         <!-- Post 1 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="1">
           <div class="post-card-header">
             <h3>Calculate Your Weight Loss Percentage Easily – Free Online Tool</h3>
             <div class="post-meta">
@@ -519,18 +635,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Learn how to calculate your weight loss percentage with our free online tool and understand why it's the most accurate way to track progress.</p>
-            <div class="post-content">
-              <p>Tracking your weight loss journey can be challenging, but calculating your weight loss percentage provides the most accurate picture of your progress. Unlike simply tracking pounds lost, weight loss percentage accounts for your starting weight, giving you a more meaningful metric.</p>
-              <p>Our free online tool makes it easy to calculate your weight loss percentage in seconds. Simply enter your starting weight and current weight, and our calculator does the rest. Whether you measure in pounds or kilograms, our tool works with both units.</p>
-              <p>Why is weight loss percentage so important? Health experts agree that losing just 5-10% of your body weight can lead to significant health benefits, including improved blood pressure, cholesterol levels, and reduced risk of chronic diseases. By tracking your percentage, you can set realistic goals and celebrate meaningful milestones.</p>
-              <p>Try our calculator today and see exactly how much progress you've made on your weight loss journey!</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 2 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="2">
           <div class="post-card-header">
             <h3>How Much Weight Have You Lost? Use Our Percent Weight Loss Calculator</h3>
             <div class="post-meta">
@@ -542,18 +652,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Discover exactly how much weight you've lost using our percentage calculator and track your weight loss journey effectively.</p>
-            <div class="post-content">
-              <p>Have you ever wondered exactly how much progress you've made on your weight loss journey? Our percent weight loss calculator provides the answer quickly and accurately. Unlike simple pound tracking, percentage calculations give you a clearer picture of your achievements relative to your starting point.</p>
-              <p>Using our calculator is simple: just input your starting weight and current weight, and we'll instantly calculate both the pounds lost and the percentage of weight you've shed. This dual perspective helps you understand your progress in a more meaningful way.</p>
-              <p>Many people find that tracking percentage rather than just pounds provides better motivation. When you see that you've lost 5%, 10%, or even 15% of your body weight, you realize the significant impact on your health and wellbeing.</p>
-              <p>Our tool is completely free and requires no registration. Your data never leaves your device, ensuring complete privacy. Start tracking your progress more effectively today!</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 3 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="3">
           <div class="post-card-header">
             <h3>Free Weight Loss Calculator: Find Out How Much Weight You've Lost</h3>
             <div class="post-meta">
@@ -565,18 +669,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Use our free weight loss calculator to find out exactly how much weight you've lost and track your progress over time.</p>
-            <div class="post-content">
-              <p>Tracking your weight loss is essential for staying motivated and on track with your health goals. Our free weight loss calculator makes this process simple and accurate. Whether you're just starting your journey or are well on your way, knowing exactly how much weight you've lost provides valuable feedback and motivation.</p>
-              <p>Our calculator works with both pounds and kilograms, so no matter your preference, you can get accurate results. Simply enter your starting weight and current weight, and we'll calculate both the total weight lost and the percentage of weight loss.</p>
-              <p>Why use our calculator instead of manual calculations? We eliminate the math errors and provide instant results. Plus, our tool includes helpful features like progress tracking and milestone celebrations to keep you motivated.</p>
-              <p>Best of all, our calculator is completely free with no hidden costs or registration requirements. Your privacy is protected as all calculations happen directly in your browser.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 4 -->
-        <div class="post-card" data-category="tips">
+        <div class="post-card" data-category="tips" data-post="4">
           <div class="post-card-header">
             <h3>Track Your Progress: How Much Weight Have I Lost? Calculator Free</h3>
             <div class="post-meta">
@@ -588,18 +686,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Track your weight loss progress with our free calculator and stay motivated on your journey to better health.</p>
-            <div class="post-content">
-              <p>Consistent progress tracking is one of the most effective ways to stay motivated during your weight loss journey. Our free "How Much Weight Have I Lost" calculator provides the tools you need to monitor your progress accurately and celebrate your successes.</p>
-              <p>Research shows that people who track their weight loss progress are more likely to achieve their goals and maintain their results long-term. Our calculator makes tracking simple and effective, giving you both pounds lost and percentage calculations.</p>
-              <p>Beyond just numbers, our tool helps you understand what those numbers mean for your health. Losing just 5-10% of your body weight can significantly improve blood pressure, cholesterol levels, and reduce your risk of type 2 diabetes.</p>
-              <p>We've designed our calculator to be user-friendly and accessible to everyone. No technical knowledge required - just enter your weights and get instant results. Start tracking your progress today and see how far you've come!</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 5 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="5">
           <div class="post-card-header">
             <h3>How Many Pounds Have I Lost? Quick Calculator to Know Your Progress</h3>
             <div class="post-meta">
@@ -611,18 +703,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Find out exactly how many pounds you've lost with our quick calculator and celebrate your weight loss achievements.</p>
-            <div class="post-content">
-              <p>Knowing exactly how many pounds you've lost is not just satisfying - it's motivating! Our quick calculator gives you immediate answers so you can track your progress and stay motivated on your weight loss journey.</p>
-              <p>Whether you're tracking weekly, monthly, or from the start of your journey, our calculator provides accurate results in seconds. No complicated math required - just enter your starting weight and current weight, and we'll do the rest.</p>
-              <p>Why focus on pounds lost? While percentage calculations provide important context, seeing the actual number of pounds you've shed can be incredibly motivating. Each pound represents hard work, dedication, and progress toward your health goals.</p>
-              <p>Our calculator also provides your weight loss percentage alongside pounds lost, giving you a complete picture of your progress. Use it regularly to stay motivated and track your journey to better health.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 6 -->
-        <div class="post-card" data-category="success">
+        <div class="post-card" data-category="success" data-post="6">
           <div class="post-card-header">
             <h3>Instant Pounds Lost Calculator – See Your Weight Loss Now</h3>
             <div class="post-meta">
@@ -634,18 +720,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Get instant results with our pounds lost calculator and see your weight loss progress in real-time.</p>
-            <div class="post-content">
-              <p>In today's fast-paced world, instant feedback is essential for maintaining motivation. Our instant pounds lost calculator provides immediate results, allowing you to see your progress the moment you step off the scale.</p>
-              <p>We've designed our calculator for speed and accuracy. Within seconds of entering your weights, you'll see exactly how many pounds you've lost and what percentage of your body weight that represents. This instant feedback helps reinforce positive habits and keeps you motivated.</p>
-              <p>Many of our users report that using our calculator regularly helps them stay accountable and focused on their goals. The ability to quickly check progress prevents discouragement and helps maintain consistency.</p>
-              <p>Our tool is completely free and works on any device - computer, tablet, or smartphone. Whether you're at home, at the gym, or on the go, you can quickly calculate your weight loss and stay motivated throughout your journey.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 7 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="7">
           <div class="post-card-header">
             <h3>Accurately Calculate How Much Weight You've Lost – Free Tool</h3>
             <div class="post-meta">
@@ -657,18 +737,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Our free tool helps you accurately calculate how much weight you've lost with precision and ease.</p>
-            <div class="post-content">
-              <p>Accuracy matters when tracking weight loss progress. Our free tool ensures precise calculations every time, eliminating the guesswork and potential errors of manual calculations.</p>
-              <p>We've developed our calculator with input from nutritionists and fitness experts to ensure it provides the most meaningful metrics for tracking weight loss. Beyond simple pound calculations, we include weight loss percentage - a metric that health professionals consider more meaningful for assessing progress.</p>
-              <p>How does our calculator ensure accuracy? We use precise mathematical formulas and account for decimal points, giving you results you can trust. Whether you've lost 5 pounds or 50, our calculator provides accurate measurements of your progress.</p>
-              <p>Trust our tool for accurate weight loss tracking. It's free, easy to use, and provides the reliable data you need to stay motivated and on track with your health goals.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 8 -->
-        <div class="post-card" data-category="tips">
+        <div class="post-card" data-category="tips" data-post="8">
           <div class="post-card-header">
             <h3>Weight Loss Calculator: Track Your Progress Easily</h3>
             <div class="post-meta">
@@ -680,18 +754,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Easily track your weight loss progress with our user-friendly calculator designed for simplicity and accuracy.</p>
-            <div class="post-content">
-              <p>Tracking weight loss shouldn't be complicated. Our user-friendly calculator is designed with simplicity in mind, making it easy for anyone to track their progress regardless of technical skill.</p>
-              <p>We've eliminated complex interfaces and confusing options. With just two inputs - your starting weight and current weight - you get comprehensive results including pounds lost, kilograms lost (if preferred), and weight loss percentage.</p>
-              <p>Why choose our calculator? Beyond simplicity, we provide context for your results. We explain what different percentage losses mean for your health and offer motivation based on your progress. This contextual information helps you understand the significance of your achievements.</p>
-              <p>Whether you're new to weight loss or a seasoned veteran, our calculator provides the easy tracking solution you need. Try it today and experience the simplicity of effective progress monitoring.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 9 -->
-        <div class="post-card" data-category="calculators">
+        <div class="post-card" data-category="calculators" data-post="9">
           <div class="post-card-header">
             <h3>Find Out How Many Pounds You've Lost – Weight Loss Calculator</h3>
             <div class="post-meta">
@@ -703,18 +771,12 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Discover exactly how many pounds you've shed with our accurate weight loss calculator and tracking tool.</p>
-            <div class="post-content">
-              <p>Curious about exactly how many pounds you've lost on your weight loss journey? Our calculator provides the precise answer you're looking for, along with valuable context about what those numbers mean for your health.</p>
-              <p>We understand that every pound lost represents effort, dedication, and progress. That's why our calculator doesn't just give you numbers - it helps you understand their significance. We provide information about health benefits associated with different amounts of weight loss and offer encouragement based on your progress.</p>
-              <p>Our calculator is designed to work with your preferences. Whether you track in pounds or kilograms, we accommodate your choice and provide accurate conversions. We also remember your previous entries (on the same device) so you can easily track progress over time.</p>
-              <p>Find out exactly how many pounds you've lost and gain valuable insights into your progress. Our free calculator is here to support your weight loss journey every step of the way.</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
         <!-- Post 10 -->
-        <div class="post-card" data-category="success">
+        <div class="post-card" data-category="success" data-post="10">
           <div class="post-card-header">
             <h3>Weight Loss Tracker: Calculate Your Pounds Lost in Seconds</h3>
             <div class="post-meta">
@@ -726,19 +788,30 @@
           </div>
           <div class="post-card-body">
             <p class="post-excerpt">Track your weight loss journey efficiently with our quick calculator that shows pounds lost in seconds.</p>
-            <div class="post-content">
-              <p>Efficiency is key when tracking weight loss progress. Our quick calculator delivers results in seconds, making it easy to incorporate progress tracking into your daily routine without disruption.</p>
-              <p>We've optimized our calculator for speed without sacrificing accuracy. The moment you enter your weights, calculations happen instantly, showing you exactly how many pounds you've lost and what percentage of your body weight that represents.</p>
-              <p>Why is speed important? The easier it is to track progress, the more likely you are to do it consistently. Consistent tracking leads to better awareness of your habits and more successful weight management long-term.</p>
-              <p>Our weight loss tracker is designed for busy people who want effective tools without complicated processes. Get your results in seconds and stay motivated with minimal effort. Try it now and see how easy progress tracking can be!</p>
-            </div>
-            <button class="read-more-btn">Read More <i class="fas fa-chevron-down"></i></button>
+            <button class="read-more-btn">Read Full Article <i class="fas fa-arrow-right"></i></button>
           </div>
         </div>
 
       </div>
     </div>
   </main>
+
+  <!-- Full Screen Modal for Reading Articles -->
+  <div class="modal" id="articleModal">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-header">
+        <h2 id="modalTitle">Article Title</h2>
+        <div class="modal-meta">
+          <span><i class="fas fa-calendar"></i> <span id="modalDate">Date</span></span>
+          <span><i class="fas fa-tag"></i> <span id="modalCategory">Category</span></span>
+        </div>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <!-- Article content will be inserted here -->
+      </div>
+    </div>
+  </div>
 
   <footer>
     <div class="footer-content">
@@ -756,22 +829,386 @@
   </footer>
 
   <script>
-    // Expandable post cards functionality
+    // Article content data
+    const articles = {
+      1: {
+        title: "Calculate Your Weight Loss Percentage Easily – Free Online Tool",
+        date: "March 15, 2025",
+        category: "Calculators",
+        content: `
+          <p>Tracking your weight loss journey can be challenging, but calculating your weight loss percentage provides the most accurate picture of your progress. Unlike simply tracking pounds lost, weight loss percentage accounts for your starting weight, giving you a more meaningful metric.</p>
+          
+          <p>Our free online tool makes it easy to calculate your weight loss percentage in seconds. Simply enter your starting weight and current weight, and our calculator does the rest. Whether you measure in pounds or kilograms, our tool works with both units.</p>
+          
+          <h3>Why Weight Loss Percentage Matters</h3>
+          
+          <p>Health experts agree that losing just 5-10% of your body weight can lead to significant health benefits, including:</p>
+          
+          <ul>
+            <li>Improved blood pressure</li>
+            <li>Better cholesterol levels</li>
+            <li>Reduced risk of chronic diseases</li>
+            <li>Improved blood sugar control</li>
+            <li>Reduced joint pain</li>
+          </ul>
+          
+          <p>By tracking your percentage, you can set realistic goals and celebrate meaningful milestones. For example, if you started at 200 pounds and have lost 20 pounds, you've achieved a 10% weight loss - a significant health milestone!</p>
+          
+          <p>Try our calculator today and see exactly how much progress you've made on your weight loss journey!</p>
+        `
+      },
+      2: {
+        title: "How Much Weight Have You Lost? Use Our Percent Weight Loss Calculator",
+        date: "March 12, 2025",
+        category: "Calculators",
+        content: `
+          <p>Have you ever wondered exactly how much progress you've made on your weight loss journey? Our percent weight loss calculator provides the answer quickly and accurately. Unlike simple pound tracking, percentage calculations give you a clearer picture of your achievements relative to your starting point.</p>
+          
+          <p>Using our calculator is simple: just input your starting weight and current weight, and we'll instantly calculate both the pounds lost and the percentage of weight you've shed. This dual perspective helps you understand your progress in a more meaningful way.</p>
+          
+          <h3>The Power of Percentage Tracking</h3>
+          
+          <p>Many people find that tracking percentage rather than just pounds provides better motivation. When you see that you've lost 5%, 10%, or even 15% of your body weight, you realize the significant impact on your health and wellbeing.</p>
+          
+          <p>Research shows that even modest weight loss of 5-10% can lead to:</p>
+          
+          <ul>
+            <li>Improved cardiovascular health</li>
+            <li>Better sleep quality</li>
+            <li>Increased energy levels</li>
+            <li>Reduced medication needs for chronic conditions</li>
+          </ul>
+          
+          <p>Our tool is completely free and requires no registration. Your data never leaves your device, ensuring complete privacy. Start tracking your progress more effectively today!</p>
+        `
+      },
+      3: {
+        title: "Free Weight Loss Calculator: Find Out How Much Weight You've Lost",
+        date: "March 10, 2025",
+        category: "Calculators",
+        content: `
+          <p>Tracking your weight loss is essential for staying motivated and on track with your health goals. Our free weight loss calculator makes this process simple and accurate. Whether you're just starting your journey or are well on your way, knowing exactly how much weight you've lost provides valuable feedback and motivation.</p>
+          
+          <p>Our calculator works with both pounds and kilograms, so no matter your preference, you can get accurate results. Simply enter your starting weight and current weight, and we'll calculate both the total weight lost and the percentage of weight loss.</p>
+          
+          <h3>Why Choose Our Calculator?</h3>
+          
+          <p>Beyond simple calculations, we provide context for your results:</p>
+          
+          <ul>
+            <li><strong>Health milestones:</strong> We explain what different percentage losses mean for your health</li>
+            <li><strong>Motivational messages:</strong> We celebrate your achievements and encourage continued progress</li>
+            <li><strong>Progress tracking:</strong> Compare your current results with previous calculations</li>
+          </ul>
+          
+          <p>We eliminate the math errors and provide instant results. Plus, our tool includes helpful features like progress tracking and milestone celebrations to keep you motivated.</p>
+          
+          <p>Best of all, our calculator is completely free with no hidden costs or registration requirements. Your privacy is protected as all calculations happen directly in your browser.</p>
+        `
+      },
+      4: {
+        title: "Track Your Progress: How Much Weight Have I Lost? Calculator Free",
+        date: "March 8, 2025",
+        category: "Tips & Advice",
+        content: `
+          <p>Consistent progress tracking is one of the most effective ways to stay motivated during your weight loss journey. Our free "How Much Weight Have I Lost" calculator provides the tools you need to monitor your progress accurately and celebrate your successes.</p>
+          
+          <p>Research shows that people who track their weight loss progress are more likely to achieve their goals and maintain their results long-term. Our calculator makes tracking simple and effective, giving you both pounds lost and percentage calculations.</p>
+          
+          <h3>Beyond the Numbers</h3>
+          
+          <p>Our calculator does more than just provide numbers - it helps you understand what those numbers mean for your health. Losing just 5-10% of your body weight can significantly improve:</p>
+          
+          <ul>
+            <li>Blood pressure</li>
+            <li>Cholesterol levels</li>
+            <li>Risk of type 2 diabetes</li>
+            <li>Sleep apnea symptoms</li>
+            <li>Joint pain and mobility</li>
+          </ul>
+          
+          <p>We've designed our calculator to be user-friendly and accessible to everyone. No technical knowledge required - just enter your weights and get instant results. Start tracking your progress today and see how far you've come!</p>
+          
+          <h3>Tips for Effective Tracking</h3>
+          
+          <p>To get the most accurate results from our calculator:</p>
+          
+          <ol>
+            <li>Weigh yourself at the same time each day (preferably in the morning)</li>
+            <li>Use the same scale for all measurements</li>
+            <li>Wear similar clothing (or none) for consistency</li>
+            <li>Track weekly rather than daily to see meaningful trends</li>
+          </ol>
+        `
+      },
+      5: {
+        title: "How Many Pounds Have I Lost? Quick Calculator to Know Your Progress",
+        date: "March 5, 2025",
+        category: "Calculators",
+        content: `
+          <p>Knowing exactly how many pounds you've lost is not just satisfying - it's motivating! Our quick calculator gives you immediate answers so you can track your progress and stay motivated on your weight loss journey.</p>
+          
+          <p>Whether you're tracking weekly, monthly, or from the start of your journey, our calculator provides accurate results in seconds. No complicated math required - just enter your starting weight and current weight, and we'll do the rest.</p>
+          
+          <h3>The Motivation of Pounds Lost</h3>
+          
+          <p>While percentage calculations provide important context, seeing the actual number of pounds you've shed can be incredibly motivating. Each pound represents:</p>
+          
+          <ul>
+            <li>Hard work and dedication</li>
+            <li>Consistent healthy choices</li>
+            <li>Progress toward your health goals</li>
+            <li>Improved wellbeing and confidence</li>
+          </ul>
+          
+          <p>Our calculator also provides your weight loss percentage alongside pounds lost, giving you a complete picture of your progress. Use it regularly to stay motivated and track your journey to better health.</p>
+          
+          <h3>Setting Realistic Goals</h3>
+          
+          <p>When using our calculator, remember that healthy weight loss is typically 1-2 pounds per week. If you're losing more than this consistently, you may want to consult with a healthcare provider to ensure you're losing weight in a healthy, sustainable way.</p>
+          
+          <p>Celebrate every pound lost - each one brings you closer to your goals and better health!</p>
+        `
+      },
+      6: {
+        title: "Instant Pounds Lost Calculator – See Your Weight Loss Now",
+        date: "March 3, 2025",
+        category: "Success Stories",
+        content: `
+          <p>In today's fast-paced world, instant feedback is essential for maintaining motivation. Our instant pounds lost calculator provides immediate results, allowing you to see your progress the moment you step off the scale.</p>
+          
+          <p>We've optimized our calculator for speed without sacrificing accuracy. The moment you enter your weights, calculations happen instantly, showing you exactly how many pounds you've lost and what percentage of your body weight that represents. This instant feedback helps reinforce positive habits and keeps you motivated.</p>
+          
+          <h3>Success Story: Maria's Journey</h3>
+          
+          <p>Maria, 42, used our calculator throughout her 6-month weight loss journey. She shares:</p>
+          
+          <p>"Being able to instantly see my progress kept me motivated on days when I felt discouraged. When I could see that I'd lost 15 pounds, and then calculate that it was 8% of my starting weight, it made the achievement feel even more significant."</p>
+          
+          <p>Maria lost 35 pounds total - nearly 20% of her starting weight - and has maintained her results for over a year.</p>
+          
+          <h3>Why Speed Matters</h3>
+          
+          <p>The easier it is to track progress, the more likely you are to do it consistently. Consistent tracking leads to:</p>
+          
+          <ul>
+            <li>Better awareness of your habits</li>
+            <li>More successful weight management long-term</li>
+            <li>Increased motivation through visible progress</li>
+            <li>Ability to make timely adjustments to your plan</li>
+          </ul>
+          
+          <p>Our weight loss tracker is designed for busy people who want effective tools without complicated processes. Get your results in seconds and stay motivated with minimal effort. Try it now and see how easy progress tracking can be!</p>
+        `
+      },
+      7: {
+        title: "Accurately Calculate How Much Weight You've Lost – Free Tool",
+        date: "February 28, 2025",
+        category: "Calculators",
+        content: `
+          <p>Accuracy matters when tracking weight loss progress. Our free tool ensures precise calculations every time, eliminating the guesswork and potential errors of manual calculations.</p>
+          
+          <p>We've developed our calculator with input from nutritionists and fitness experts to ensure it provides the most meaningful metrics for tracking weight loss. Beyond simple pound calculations, we include weight loss percentage - a metric that health professionals consider more meaningful for assessing progress.</p>
+          
+          <h3>How Our Calculator Ensures Accuracy</h3>
+          
+          <p>We use precise mathematical formulas and account for decimal points, giving you results you can trust. Whether you've lost 5 pounds or 50, our calculator provides accurate measurements of your progress.</p>
+          
+          <p>Key features that ensure accuracy:</p>
+          
+          <ul>
+            <li>Precise decimal calculations</li>
+            <li>Support for both pounds and kilograms</li>
+            <li>Automatic unit conversion</li>
+            <li>Error checking for invalid inputs</li>
+          </ul>
+          
+          <h3>Why Accuracy Matters in Weight Loss Tracking</h3>
+          
+          <p>Accurate tracking helps you:</p>
+          
+          <ol>
+            <li>Set realistic goals based on actual progress</li>
+            <li>Make informed decisions about your nutrition and exercise plans</li>
+            <li>Stay motivated with reliable feedback</li>
+            <li>Identify plateaus and adjust your strategy accordingly</li>
+          </ol>
+          
+          <p>Trust our tool for accurate weight loss tracking. It's free, easy to use, and provides the reliable data you need to stay motivated and on track with your health goals.</p>
+        `
+      },
+      8: {
+        title: "Weight Loss Calculator: Track Your Progress Easily",
+        date: "February 25, 2025",
+        category: "Tips & Advice",
+        content: `
+          <p>Tracking weight loss shouldn't be complicated. Our user-friendly calculator is designed with simplicity in mind, making it easy for anyone to track their progress regardless of technical skill.</p>
+          
+          <p>We've eliminated complex interfaces and confusing options. With just two inputs - your starting weight and current weight - you get comprehensive results including pounds lost, kilograms lost (if preferred), and weight loss percentage.</p>
+          
+          <h3>Why Choose Our Calculator?</h3>
+          
+          <p>Beyond simplicity, we provide context for your results. We explain what different percentage losses mean for your health and offer motivation based on your progress. This contextual information helps you understand the significance of your achievements.</p>
+          
+          <p>Benefits of our easy-to-use calculator:</p>
+          
+          <ul>
+            <li><strong>No learning curve:</strong> Intuitive design that anyone can use immediately</li>
+            <li><strong>Instant results:</strong> Get your calculations in seconds</li>
+            <li><strong>Privacy focused:</strong> Your data never leaves your device</li>
+            <li><strong>Completely free:</strong> No hidden costs or registration required</li>
+          </ul>
+          
+          <h3>Tips for Getting the Most From Our Calculator</h3>
+          
+          <p>To maximize the benefits of tracking:</p>
+          
+          <ol>
+            <li>Use the calculator consistently - weekly tracking shows meaningful trends</li>
+            <li>Record your results to see progress over time</li>
+            <li>Celebrate milestones - every 5% loss is a significant achievement</li>
+            <li>Share your progress with supportive friends or family for accountability</li>
+          </ol>
+          
+          <p>Whether you're new to weight loss or a seasoned veteran, our calculator provides the easy tracking solution you need. Try it today and experience the simplicity of effective progress monitoring.</p>
+        `
+      },
+      9: {
+        title: "Find Out How Many Pounds You've Lost – Weight Loss Calculator",
+        date: "February 22, 2025",
+        category: "Calculators",
+        content: `
+          <p>Curious about exactly how many pounds you've lost on your weight loss journey? Our calculator provides the precise answer you're looking for, along with valuable context about what those numbers mean for your health.</p>
+          
+          <p>We understand that every pound lost represents effort, dedication, and progress. That's why our calculator doesn't just give you numbers - it helps you understand their significance. We provide information about health benefits associated with different amounts of weight loss and offer encouragement based on your progress.</p>
+          
+          <h3>Health Benefits by Pounds Lost</h3>
+          
+          <p>Even modest weight loss can have significant health benefits:</p>
+          
+          <ul>
+            <li><strong>5-10 pounds:</strong> Reduced risk of diabetes, improved blood pressure</li>
+            <li><strong>10-20 pounds:</strong> Better cholesterol levels, reduced joint pain</li>
+            <li><strong>20+ pounds:</strong> Significant reduction in chronic disease risk, improved mobility</li>
+          </ul>
+          
+          <p>Our calculator is designed to work with your preferences. Whether you track in pounds or kilograms, we accommodate your choice and provide accurate conversions. We also remember your previous entries (on the same device) so you can easily track progress over time.</p>
+          
+          <h3>Making Sense of Your Results</h3>
+          
+          <p>When you use our calculator, you'll receive:</p>
+          
+          <ol>
+            <li>Exact pounds or kilograms lost</li>
+            <li>Weight loss percentage</li>
+            <li>Context about what your results mean for your health</li>
+            <li>Motivational message based on your progress</li>
+          </ol>
+          
+          <p>Find out exactly how many pounds you've lost and gain valuable insights into your progress. Our free calculator is here to support your weight loss journey every step of the way.</p>
+        `
+      },
+      10: {
+        title: "Weight Loss Tracker: Calculate Your Pounds Lost in Seconds",
+        date: "February 20, 2025",
+        category: "Success Stories",
+        content: `
+          <p>Efficiency is key when tracking weight loss progress. Our quick calculator delivers results in seconds, making it easy to incorporate progress tracking into your daily routine without disruption.</p>
+          
+          <p>We've optimized our calculator for speed without sacrificing accuracy. The moment you enter your weights, calculations happen instantly, showing you exactly how many pounds you've lost and what percentage of your body weight that represents.</p>
+          
+          <h3>Success Story: James's Transformation</h3>
+          
+          <p>James, 38, used our calculator throughout his 40-pound weight loss journey:</p>
+          
+          <p>"The speed of the calculator was a game-changer for me. I could step on the scale, enter my numbers, and immediately see my progress. That instant feedback kept me accountable and motivated throughout my journey."</p>
+          
+          <p>James not only reached his goal weight but has maintained his results for over two years, using our calculator for occasional check-ins.</p>
+          
+          <h3>Why Speed Matters in Weight Loss Tracking</h3>
+          
+          <p>The easier it is to track progress, the more likely you are to do it consistently. Consistent tracking leads to better awareness of your habits and more successful weight management long-term.</p>
+          
+          <p>Benefits of quick tracking:</p>
+          
+          <ul>
+            <li><strong>No excuses:</strong> Takes seconds, so you're more likely to do it regularly</li>
+            <li><strong>Immediate motivation:</strong> See results right away</li>
+            <li><strong>Trend identification:</strong> Quick tracking makes it easy to spot patterns</li>
+            <li><strong>Adaptability:</strong> Make timely adjustments to your plan based on recent data</li>
+          </ul>
+          
+          <p>Our weight loss tracker is designed for busy people who want effective tools without complicated processes. Get your results in seconds and stay motivated with minimal effort. Try it now and see how easy progress tracking can be!</p>
+        `
+      }
+    };
+
+    // Modal functionality
+    const modal = document.getElementById('articleModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDate = document.getElementById('modalDate');
+    const modalCategory = document.getElementById('modalCategory');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+
+    // Open modal when Read More button is clicked
     document.querySelectorAll('.read-more-btn').forEach(button => {
-      button.addEventListener('click', function() {
-        const postContent = this.previousElementSibling;
-        const isExpanded = postContent.classList.contains('expanded');
+      button.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const postCard = this.closest('.post-card');
+        const postId = postCard.getAttribute('data-post');
         
-        if (isExpanded) {
-          postContent.classList.remove('expanded');
-          this.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
-          this.classList.remove('expanded');
-        } else {
-          postContent.classList.add('expanded');
-          this.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
-          this.classList.add('expanded');
+        if (articles[postId]) {
+          const article = articles[postId];
+          modalTitle.textContent = article.title;
+          modalDate.textContent = article.date;
+          modalCategory.textContent = article.category;
+          modalBody.innerHTML = article.content;
+          modal.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling
         }
       });
+    });
+
+    // Also open modal when clicking anywhere on the card
+    document.querySelectorAll('.post-card').forEach(card => {
+      card.addEventListener('click', function(e) {
+        if (!e.target.classList.contains('read-more-btn')) {
+          const postId = this.getAttribute('data-post');
+          
+          if (articles[postId]) {
+            const article = articles[postId];
+            modalTitle.textContent = article.title;
+            modalDate.textContent = article.date;
+            modalCategory.textContent = article.category;
+            modalBody.innerHTML = article.content;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+          }
+        }
+      });
+    });
+
+    // Close modal when close button is clicked
+    modalClose.addEventListener('click', function() {
+      modal.classList.remove('active');
+      document.body.style.overflow = 'auto'; // Re-enable scrolling
+    });
+
+    // Close modal when clicking outside the content
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
+      }
     });
 
     // Category filtering functionality
